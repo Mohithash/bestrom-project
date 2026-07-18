@@ -23,31 +23,92 @@
 
 ## What is BestROM?
 
-**BestROM** is a **pure AOSP Android 17** custom ROM — not Lineage, not VoltageOS.
+**BestROM** is a **pure AOSP Android 17** custom ROM — not Lineage, not VoltageOS, not another heavy skin.
+
+We are building toward one of the **first custom ROMs on Android 17** whose daily-driver promise is simple:
+
+> **Best battery life + real smoothness — AOSP-compliant, without the cosmetic tax.**
 
 | | |
 |--|--|
 | **Android** | 17 · API 37 · `android-17.0.0_r1` |
+| **North star** | **Battery first** — then smoothness, then everything else |
 | **Design** | **Aurora Night** — pure black `#000` + sparse violet/cyan |
-| **UI north star** | **Battery-first** — dark AMOLED UI by default |
 | **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
 | **Status** | Brand + scaffold live · device bring-up next |
-| **Goal** | Clean AOSP + dark shell + thrifty battery UX |
+| **Goal** | Clean AOSP daily driver — thrifty, fluid, honest |
 
 > Tagline: **Android, refined. Battery first.**
 
 ---
 
-## Design — dark for battery
+## Design philosophy
 
-We treat BestROM as a **product**: every default UI choice asks *does this waste AMOLED power?*
+### Battery is the most important feature
+
+Modern Android often spends its budget on the wrong things: **cosmetic skins**, endless **animations**, heavy **artworks**, feature checklists, and **placebo “optimizations”** that look impressive in screenshots and feel worse in the pocket.
+
+That cost is not free. It steals:
+
+| What gets spent | What you lose |
+|-----------------|---------------|
+| GPU / compositor work on flashy UI | **Smoothness** and frame consistency |
+| Always-on visual noise | **Fluidity** under real multitasking |
+| Bright panels, skins, effects | **Battery juice** you needed by evening |
+| Bloated “exclusive” features | Stability, updateability, AOSP clarity |
+
+**BestROM rejects that trade.**
+
+We believe a daily driver should feel **fast because it is light**, not because it papered over jank with motion blur and marketing. Battery is not a settings page we remember later — it is the **primary design constraint**. Every default, every surface, every optional extra has to answer:
+
+1. Does this **help battery** (or at least not hurt it)?  
+2. Does this keep the system **smooth and fluid** under real use?  
+3. Is it still **AOSP-compliant** and maintainable — not a one-off skin fork?
+
+If the answer is “it looks cool in a trailer,” it does not ship as a default.
+
+### What we refuse
+
+| We skip | Why |
+|---------|-----|
+| Heavy cosmetic skins | CPU/GPU and memory tax for brand theater |
+| Animation for animation’s sake | Motion should clarify, not perform |
+| Artwork walls & bright chrome | AMOLED pays in milliwatts; battery pays in hours |
+| Feature bloat & placebo toggles | Complexity without real endurance or fluidity |
+| “Everything maxed” defaults | 120 Hz + light UI + effects is the opposite of our product |
+
+### What we build instead
+
+| We ship | Why |
+|---------|-----|
+| **Pure AOSP 17 base** | Clean path, fewer surprise layers, real compliance |
+| **Battery-first dark UI** | True black canvas on AMOLED; light is not the product |
+| **Sparse craft** | Violet/cyan as *sparks*, not full-screen decoration |
+| **Thrifty controls** | Charge limit, refresh sense, power-save that cuts *cost* |
+| **Daily-driver honesty** | Radio, camera, stability over screenshot features |
+
+**BestROM** = AOSP soul + product restraint.  
+Not another ROM that pretends more chrome equals more quality.
+
+### In one line
+
+> *Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
+
+Deep specs: [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)
+
+---
+
+## Visual language — dark for battery
+
+Every default UI choice asks: *does this waste AMOLED power or compositor budget?*
 
 | Law | Meaning |
 |-----|---------|
 | Pure black canvas | `#000000` primary backgrounds (pixels off) |
 | Accents are sparks | Violet / cyan only on active states — not full-screen floods |
-| Dark is the product | Not a toggle we half-support; light is not a v1 goal |
-| Controls match the look | Charge limit, refresh thrift, power-save that dims cost |
+| Dark is the product | Not a half-supported light theme; battery leads the look |
+| Controls match the look | Charge limit, refresh thrift, power-save that dims real cost |
+| Motion stays cheap | Short, purposeful — not forever-on effects |
 
 | Asset | Path |
 |-------|------|
@@ -127,5 +188,5 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ---
 
 <p align="center">
-  <sub>BestROM · Aurora Night · battery-first dark · Android 17 · peridot first</sub>
+  <sub>BestROM · battery first · smooth by restraint · pure AOSP 17 · peridot first</sub>
 </p>
