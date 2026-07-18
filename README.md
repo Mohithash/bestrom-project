@@ -49,6 +49,7 @@ We treat BestROM as a **product**, not only a build script.
 | GitHub banner | [`brand/banner/github-banner.jpg`](brand/banner/github-banner.jpg) |
 | AMOLED wallpaper | [`brand/wallpaper/bestrom-amoled.jpg`](brand/wallpaper/bestrom-amoled.jpg) |
 | Feature roadmap | [`docs/FEATURES.md`](docs/FEATURES.md) |
+| Complete ROM roadmap | [`docs/COMPLETE_ROM_ROADMAP.md`](docs/COMPLETE_ROM_ROADMAP.md) |
 
 **Palette:** void `#0B0614` · violet `#7C3AED` · cyan `#22D3EE` · mist `#E2E8F0`
 
