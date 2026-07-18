@@ -1,14 +1,21 @@
 # Social bios & About text (copy-paste)
 
-## GitHub profile (user About)
+BestROM is a **side hobby**. Prefer bios on **project channels** (Telegram, SF, XDA thread).  
+Leave your **personal GitHub profile** personal — no need to brand yourself as the ROM.
+
+## GitHub profile (personal — keep light / optional)
 
 ```
-Building BestROM — pure AOSP 17 · battery first · monochrome · POCO F6 first
+(side projects in their own repos)
 ```
 
-Website: `https://github.com/Mohithash/bestrom-project`
+Or leave blank. Do **not** feel required to put BestROM in your main bio.
 
-## GitHub org (if you create BestROM org later)
+## Project hub / channel bios (use these)
+
+Hub About is already set on [bestrom-project](https://github.com/Mohithash/bestrom-project).
+
+## GitHub org (only if you create a separate BestROM org later)
 
 ```
 BestROM — pure AOSP Android 17. Battery first. Black + grey dots. Ultra minimal.

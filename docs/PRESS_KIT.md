@@ -136,14 +136,18 @@ BestROM official
 
 ## GitHub visibility checklist
 
-- [x] Repo **About** description + homepage  
-- [x] **Topics** tags on all project repos  
+**Note:** BestROM is a **side hobby**. Keep PR on **project repos only** — do **not** take over a personal GitHub profile with ROM branding.
+
+- [x] Repo **About** description + homepage (project repos)  
+- [x] **Topics** tags on project repos  
 - [x] Social banner + logo in hub  
 - [x] Philosophy / About / Press kit docs  
-- [ ] Pin hub repo on GitHub profile  
-- [ ] Enable **Discussions** for community screenshots  
+- [x] **Discussions** on hub (optional community)  
 - [ ] SourceForge project description aligned  
-- [ ] Optional: XDA thread + Telegram + Reddit r/Android + r/PocoPhones  
+- [ ] Optional: XDA / Telegram / Reddit when you want attention  
+- [ ] Do **not** require personal profile pin / ROM-as-identity bio  
+
+Visibility target: **[bestrom-project](https://github.com/Mohithash/bestrom-project)** and sister trees — not your personal home page.
 
 ---
 
