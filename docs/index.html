@@ -10,10 +10,11 @@
     body {
       margin: 0;
       min-height: 100vh;
+      /* Pure black canvas + sparse aurora dust (battery-first AMOLED) */
       background:
-        radial-gradient(ellipse at 15% 10%, #7c3aed33, transparent 40%),
-        radial-gradient(ellipse at 85% 70%, #22d3ee22, transparent 40%),
-        var(--br-void);
+        radial-gradient(ellipse at 15% 10%, #7c3aed22, transparent 40%),
+        radial-gradient(ellipse at 85% 70%, #22d3ee18, transparent 35%),
+        #000000;
       color: var(--br-mist);
       font-family: var(--br-font);
     }
@@ -71,18 +72,18 @@
     <header class="hero">
       <img class="logo" src="../brand/logo/bestrom-icon.jpg" alt="BestROM" />
       <h1>BestROM</h1>
-      <p class="tag">Pure AOSP Android 17 · Aurora Night · peridot first</p>
+      <p class="tag">Pure AOSP Android 17 · battery-first dark · peridot first</p>
       <img class="banner" src="../brand/banner/github-banner.jpg" alt="Banner" />
     </header>
 
     <section class="bestrom-card">
-      <h2 style="margin-top:0">Aurora palette</h2>
-      <p class="tag">Void · violet · cyan — AMOLED-first craft.</p>
+      <h2 style="margin-top:0">Aurora Night — battery palette</h2>
+      <p class="tag">Pure black canvas · violet/cyan sparks only — AMOLED power first.</p>
       <div class="swatches">
+        <div class="swatch" style="background:#000000; outline:1px solid #1a1a1a" title="black (AMOLED)"></div>
         <div class="swatch" style="background:#0B0614" title="void"></div>
-        <div class="swatch" style="background:#1A0A3E" title="deep"></div>
+        <div class="swatch" style="background:#14082A" title="deep"></div>
         <div class="swatch" style="background:#7C3AED" title="violet"></div>
-        <div class="swatch" style="background:#A78BFA" title="glow"></div>
         <div class="swatch" style="background:#22D3EE" title="cyan"></div>
         <div class="swatch" style="background:#E2E8F0" title="mist"></div>
       </div>
@@ -91,11 +92,15 @@
     <div class="grid">
       <a class="bestrom-card card" href="../design/DESIGN_SYSTEM.md">
         <strong class="bestrom-accent">Design system</strong>
-        <p class="tag">Tokens, type, motion, do/don’t</p>
+        <p class="tag">Battery laws · pure black · tokens</p>
+      </a>
+      <a class="bestrom-card card" href="BATTERY_UI.md">
+        <strong class="bestrom-accent">Battery UI / UX</strong>
+        <p class="tag">Screens · charge limit · power save</p>
       </a>
       <a class="bestrom-card card" href="FEATURES.md">
         <strong class="bestrom-accent">Features</strong>
-        <p class="tag">Roadmap phases 0 → 3</p>
+        <p class="tag">Roadmap phases 0 → 4</p>
       </a>
       <a class="bestrom-card card" href="https://github.com/Mohithash/bestrom_manifest/tree/17">
         <strong class="bestrom-accent">Manifest</strong>
@@ -108,7 +113,7 @@
     </div>
 
     <footer>
-      BestROM · Android, refined. · <code>peridot</code>
+      BestROM · Android, refined. Battery first. · <code>peridot</code>
     </footer>
   </div>
 </body>

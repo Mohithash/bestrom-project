@@ -1,46 +1,86 @@
 /**
- * BestROM 17 — Aurora Night design tokens
- * Use in GitHub Pages, docs sites, or future Settings themes.
+ * BestROM 17 — Aurora Night (Battery) design tokens
+ * Pure-black first for AMOLED power savings.
+ * Use in docs sites, GitHub Pages, and as reference for SystemUI / Settings themes.
  */
 :root {
+  /* Canvas — battery first */
+  --br-black: #000000;
   --br-void: #0b0614;
-  --br-deep: #1a0a3e;
+  --br-ink: #0a0a0a;
+  --br-deep: #14082a;
+
+  /* Accents — sparks only, never full-screen floods */
   --br-violet: #7c3aed;
   --br-violet-glow: #a78bfa;
   --br-cyan: #22d3ee;
+
+  /* Type */
   --br-mist: #e2e8f0;
   --br-muted: #94a3b8;
-  --br-line: #2e1065;
+  --br-line: #1a1a1a;
+
+  /* Status */
   --br-danger: #f43f5e;
   --br-ok: #34d399;
 
-  --br-grad-brand: linear-gradient(135deg, #1a0a3e 0%, #7c3aed 50%, #22d3ee 100%);
-  --br-glass: rgba(26, 10, 62, 0.55);
-  --br-glass-border: rgba(167, 139, 250, 0.25);
+  /* Gradients — brand marks / boot only */
+  --br-grad-brand: linear-gradient(135deg, #000000 0%, #1a0a3e 55%, #7c3aed 100%);
+  --br-grad-mesh: radial-gradient(ellipse at 15% 10%, #7c3aed22, transparent 40%),
+    radial-gradient(ellipse at 85% 80%, #22d3ee18, transparent 35%), #000000;
+
+  /* Glass — dark, low luminance */
+  --br-glass: rgba(0, 0, 0, 0.72);
+  --br-glass-border: rgba(124, 58, 237, 0.18);
 
   --br-radius-card: 16px;
   --br-radius-pill: 999px;
   --br-font: "Inter", "Roboto", system-ui, sans-serif;
   --br-mono: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+
+  /* Motion — keep GPU cheap */
+  --br-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --br-dur: 200ms;
 }
 
+/* Default product shell = pure black */
+html,
+body,
 body.bestrom-dark {
-  background: var(--br-void);
+  background: var(--br-black);
   color: var(--br-mist);
   font-family: var(--br-font);
 }
 
 .bestrom-btn {
-  background: var(--br-grad-brand);
-  color: white;
+  background: var(--br-violet);
+  color: var(--br-mist);
   border: none;
   border-radius: var(--br-radius-pill);
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   cursor: pointer;
+  transition: opacity var(--br-dur) var(--br-ease);
+}
+
+.bestrom-btn:hover {
+  opacity: 0.92;
+}
+
+/* Prefer solid violet CTA over bright multi-stop gradients for less average luminance */
+.bestrom-btn-brand {
+  background: var(--br-grad-brand);
+  color: #fff;
 }
 
 .bestrom-card {
+  background: var(--br-ink);
+  border: 1px solid var(--br-line);
+  border-radius: var(--br-radius-card);
+  padding: 1.25rem;
+}
+
+.bestrom-card-glass {
   background: var(--br-glass);
   border: 1px solid var(--br-glass-border);
   border-radius: var(--br-radius-card);
@@ -50,4 +90,29 @@ body.bestrom-dark {
 
 .bestrom-accent {
   color: var(--br-cyan);
+}
+
+.bestrom-muted {
+  color: var(--br-muted);
+}
+
+/* Battery settings signature panel */
+.bestrom-battery-panel {
+  background: var(--br-black);
+  border: 1px solid var(--br-line);
+  border-radius: var(--br-radius-card);
+  padding: 1.5rem;
+}
+
+.bestrom-battery-panel h2 {
+  color: var(--br-cyan);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+/* Power-save hint: kill decorative blur */
+@media (prefers-reduced-motion: reduce) {
+  .bestrom-card-glass {
+    backdrop-filter: none;
+  }
 }
