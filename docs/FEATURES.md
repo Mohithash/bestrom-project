@@ -27,7 +27,7 @@ First ship is **bring-up**. Features below ship after a bootable peridot build �
 - [ ] **Pure dark only** product theme (Settings / SystemUI / Setup) — no light default
 - [ ] **`#000000` pure black** wallpaper as default pack
 - [ ] Black-led boot animation (short, sparse)
-- [ ] QS / shade: black scrim, cyan active — no rainbow skins
+- [ ] QS / shade: black scrim, grey active — monochrome only
 - [ ] SetupWizard: zero light full-bleed pages
 - [ ] Force / strong default night mode props where AOSP allows
 - [ ] `ro.bestrom.*` props + About branding

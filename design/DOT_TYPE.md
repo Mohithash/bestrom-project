@@ -1,21 +1,29 @@
-# BestROM — Dot type (Nothing-inspired)
+# BestROM — Dot type
 
-Ultra-minimal **dot-matrix letterforms** on **pure black**.  
-Inspired by **Nothing OS** restraint and glyph-like dots — adapted for **BestROM battery-first AMOLED**.
-
-We are **not** Nothing OS and not a clone. We share the idea: **less ink, more silence, dots instead of solid chrome.**
+**Nothing OS–like:** ultra minimal · **black + grey dots only**.
 
 ---
 
-## Why dots
+## Allowed colors (hard rule)
 
-| Solid filled logo / UI type | Dotted type on black |
-|-----------------------------|----------------------|
-| Large lit areas on OLED | Only small dots light up |
-| Looks like every other skin | Ownable, minimal mark |
-| Heavy “app icon blob” | Whisper of identity |
+| Allowed | Hex | Use |
+|---------|-----|-----|
+| **Black** | `#000000` | All backgrounds, empty space |
+| **Grey dots** | `#6B7280` · `#9CA3AF` · `#D1D5DB` | Letter dots only (dim → mid → bright) |
 
-Dots = **ultra minimalistic** + still **legible brand** + friendlier to **battery** than big solid white wordmarks.
+**Forbidden in brand art and BestROM chrome:** violet, cyan, blue, green, red, neon, gold, gradients of hue.
+
+System status (errors, battery % bars) may use platform defaults when Android requires it — **brand identity stays monochrome.**
+
+---
+
+## Why grey dots on black
+
+| Solid white logo | Grey dots on black |
+|------------------|--------------------|
+| Large lit area | Small lit dots only |
+| Harsh on AMOLED | Softer, thriftier |
+| Generic app blob | Nothing-like quiet mark |
 
 ---
 
@@ -24,69 +32,34 @@ Dots = **ultra minimalistic** + still **legible brand** + friendlier to **batter
 | Rule | Spec |
 |------|------|
 | Canvas | Always `#000000` |
-| Dot color | Mist `#E2E8F0` or pure white at low coverage |
-| Accent dots | Optional single violet / cyan dots (never a rainbow field) |
-| Grid | Regular matrix; prefer round dots |
-| Weight | Sparse — prefer fewer dots over dense solid fill |
-| Size | On lock/boot: large quiet B; on icons: compact B grid |
-| Never | Solid filled letters as the **primary** brand mark |
-| Never | Busy glyph animations that loop forever (battery) |
-
-### Suggested matrix (reference)
-
-- Icon: B on ~9–13 unit wide grid, dots ~ equally spaced  
-- Wordmark BESTROM: monospaced-ish dot cells, letter spacing generous  
-- Wallpaper: **very faint** oversized B or corner dust only  
-
-Exact SVG/font can land later; **intent** is binding for all brand art.
+| Dot fill | Greys only — never pure white flood of the whole letter as a solid shape |
+| Grid | Regular matrix, round dots |
+| Weight | Sparse — black shows through the letter |
+| Brand letters | **B** / **BESTROM** as dots only |
+| Body UI text | Solid grey (`#D1D5DB` / `#9CA3AF`) for readability — not dotted paragraphs |
 
 ---
 
-## Where dotted type appears
+## Surfaces
 
 | Surface | Treatment |
 |---------|-----------|
-| App / org icon | Dotted **B** on pure black |
-| GitHub banner | Dotted wordmark or B, mostly empty black |
-| Boot animation | Dots assemble briefly → hold → fade (short) |
-| About phone | Small dotted BestROM mark |
-| Wallpaper | Whisper dots / faint B — not a bright poster |
-| Setup splash | Dotted B + one line of calm copy |
+| Icon | Grey-dotted **B** on black |
+| Banner | Grey-dotted mark, vast black |
+| Wallpaper | Whisper grey dots or faint B |
+| Boot | Grey dots assemble on black — short |
+| About | Small grey dotted mark |
 
-System UI body text stays **Roboto/Inter** for readability.  
-**Dot type is brand craft**, not the entire Settings font (unless we ship a specialty face later).
+## Motion
 
----
-
-## Motion (if any)
-
-- Dots may **fade in** or light a few cells — 200–400ms  
-- No forever pulse walls  
-- Power save: static mark only  
-
----
-
-## Relationship to Nothing
-
-| Nothing OS (inspiration) | BestROM |
-|--------------------------|---------|
-| Ultra minimal | Same |
-| Dot / glyph identity | Dotted B / BESTROM |
-| Often light + gray product UI | **Pure black only** (our battery bar) |
-| Hardware Glyph | Software dots on AMOLED black |
-| Closed product stack | **Pure AOSP 17** product layer |
-
-> *Nothing-level minimal. BestROM-level pure dark + battery.*
-
----
+Fade/assemble grey dots 200–400ms. No color cycles. Power save: static.
 
 ## Do / Don’t
 
 | Do | Don’t |
 |----|--------|
-| Dotted B on `#000` | Solid neon filled logo as default |
-| Generous black margin | Crowded dot fields that look solid |
-| Few accent dots | RGB dotted rainbow |
-| Short assemble animation | Looping light shows |
+| Black + grey only | Violet / cyan accents |
+| Dotted B | Solid filled multicolor logos |
+| Empty black margin | Busy colored art |
 
-See [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) · [PHILOSOPHY.md](../docs/PHILOSOPHY.md)
+See [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md)

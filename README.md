@@ -5,18 +5,18 @@
 <h1 align="center">BestROM</h1>
 
 <p align="center">
-  <strong>Pure AOSP Android 17</strong> · battery first · smooth by restraint · <code>peridot</code>
+  <strong>Pure AOSP Android 17</strong> · black + grey dots · battery first · <code>peridot</code>
 </p>
 
 <p align="center">
-  <img src="brand/banner/github-banner.jpg" alt="BestROM Aurora banner" width="100%" />
+  <img src="brand/banner/github-banner.jpg" alt="BestROM monochrome banner" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Android-17-22D3EE?style=for-the-badge&labelColor=0B0614" alt="Android 17" /></a>
-  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Base-AOSP-7C3AED?style=for-the-badge&labelColor=0B0614" alt="AOSP" /></a>
-  <a href="https://sourceforge.net/projects/bestrom/"><img src="https://img.shields.io/badge/Downloads-SourceForge-A78BFA?style=for-the-badge&labelColor=0B0614" alt="SF" /></a>
-  <img src="https://img.shields.io/badge/Device-peridot-E2E8F0?style=for-the-badge&labelColor=0B0614" alt="peridot" />
+  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Android-17-9CA3AF?style=for-the-badge&labelColor=000000" alt="Android 17" /></a>
+  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Base-AOSP-D1D5DB?style=for-the-badge&labelColor=000000" alt="AOSP" /></a>
+  <a href="https://sourceforge.net/projects/bestrom/"><img src="https://img.shields.io/badge/Downloads-SourceForge-6B7280?style=for-the-badge&labelColor=000000" alt="SF" /></a>
+  <img src="https://img.shields.io/badge/Device-peridot-9CA3AF?style=for-the-badge&labelColor=000000" alt="peridot" />
 </p>
 
 ---
@@ -33,13 +33,13 @@ We are building toward one of the **first custom ROMs on Android 17** whose dail
 |--|--|
 | **Android** | 17 · API 37 · `android-17.0.0_r1` |
 | **North star** | **Battery first** — then smoothness, then everything else |
-| **Design** | **Ultra minimal** · pure black · **dotted** B / BESTROM (Nothing-inspired) |
-| **UI default** | Pure dark only from first boot — no light product skin |
+| **Design** | **Nothing-like monochrome** — black + **grey dots** only |
+| **UI default** | Pure black from first boot — no light skin, no brand rainbow |
 | **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
 | **Status** | Brand + scaffold live · device bring-up next |
 | **Goal** | Clean AOSP daily driver — thrifty, fluid, honest |
 
-> Tagline: **Android, refined. Battery first. Pure dark by default.**
+> Tagline: **Black. Grey dots. Battery first.**
 
 ---
 
@@ -83,18 +83,18 @@ If the answer is “it looks cool in a trailer,” it does not ship as a default
 | We ship | Why |
 |---------|-----|
 | **Pure AOSP 17 base** | Clean path, fewer surprise layers, real compliance |
-| **Pure dark by default** | `#000000` canvas on AMOLED — light is not a product goal |
-| **Sparse craft** | Violet/cyan as *sparks*, not full-screen decoration |
+| **Black + grey only** | Brand colors forbidden except greys — Nothing-like quiet |
+| **Grey dotted marks** | B / BESTROM as dots — thrifty on AMOLED |
 | **Thrifty controls** | Charge limit, refresh sense, power-save that cuts *cost* |
 | **Daily-driver honesty** | Radio, camera, stability over screenshot features |
 
-**BestROM** = AOSP soul + product restraint + **pure black defaults**.  
+**BestROM** = AOSP soul + **Nothing-like monochrome**.  
 
-We take the same *taste* as **Nothing OS**: **ultra minimal**, empty space, **dotted letter** identity — quiet product, not a skin circus. We are **not** Nothing: stack is **pure AOSP 17**, and defaults are **pure black** for battery (Not light/gray chrome). Logos and brand marks use **dot-matrix letters** so the mark itself stays thrifty on AMOLED.
+Same taste as **Nothing OS**: ultra minimal, empty space, **grey dotted letters**. Not a clone: **pure AOSP 17**, pure **black** canvas, **no brand hues** — only black and grey.
 
 ### In one line
 
-> *Ultra minimal. Pure dark. Dotted marks. Less cosmetic tax. More battery. Still Android — pure AOSP 17.*
+> *Black. Grey dots. Ultra minimal. More battery. Still Android — pure AOSP 17.*
 
 **Full philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
 **Dot type:** [`design/DOT_TYPE.md`](design/DOT_TYPE.md)  
@@ -103,21 +103,18 @@ We take the same *taste* as **Nothing OS**: **ultra minimal**, empty space, **do
 
 ---
 
-## Visual language — pure dark by default
+## Visual language — black + grey dots only
 
-**Default = pure dark.** Not an optional theme. Not Material gray. Not light mode with a night switch for v1.
-
-Every default UI choice asks: *does this waste AMOLED power or compositor budget?*
+**Hard palette law:** brand design may use **only black and greys**. No violet, cyan, or other hues.
 
 | Law | Meaning |
 |-----|---------|
-| Pure black canvas | `#000000` primary backgrounds (pixels off) — **always** |
+| Pure black canvas | `#000000` backgrounds — **always** |
+| Grey dots only | Logo / wordmark = mid greys `#9CA3AF` / `#D1D5DB` on black |
 | Ultra minimal | Empty space > decoration (Nothing-like quiet) |
-| Dotted brand marks | B / BESTROM as **dot matrix**, not solid fill logos |
+| No brand rainbow | Zero violet/cyan/neon in BestROM chrome |
 | No light product skin | Dark-only from Setup → home → Settings → QS |
-| Accents are sparks | Violet / cyan only on active states — not full-screen floods |
-| Dark beats gray “minimal” | Lit gray still costs OLED power; black wins battery |
-| Motion stays cheap | Short assemble of dots — not forever light shows |
+| Motion stays cheap | Short grey-dot assemble — no color cycles |
 
 | Asset | Path |
 |-------|------|
@@ -134,7 +131,7 @@ Every default UI choice asks: *does this waste AMOLED power or compositor budget
 | GitHub banner | [`brand/banner/github-banner.jpg`](brand/banner/github-banner.jpg) |
 | AMOLED wallpaper | [`brand/wallpaper/bestrom-amoled.jpg`](brand/wallpaper/bestrom-amoled.jpg) |
 
-**Palette:** black `#000000` · void `#0B0614` · violet `#7C3AED` · cyan `#22D3EE` · mist `#E2E8F0`
+**Palette:** black `#000000` · grey dots `#6B7280` / `#9CA3AF` / `#D1D5DB` — **that is all**
 
 <p align="center">
   <img src="brand/wallpaper/bestrom-amoled.jpg" alt="BestROM wallpaper" width="280" />
@@ -201,5 +198,5 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ---
 
 <p align="center">
-  <sub>BestROM · ultra minimal · pure dark · dotted · pure AOSP 17 · peridot first</sub>
+  <sub>BestROM · black · grey dots · pure AOSP 17 · peridot first</sub>
 </p>

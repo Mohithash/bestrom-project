@@ -33,13 +33,15 @@ Wallpaper, shade empty regions, Settings root → **`#000000`**.
 Cards may use `#0A0A0A` only for separation — never light gray panels as brand default.  
 Pure dark defaults are **better for battery** than light chrome or soft-gray dark skins.
 
-### 3. Accents are status
+### 3. Accents are greys only (brand)
 | State | Color |
 |-------|-------|
-| Neutral | muted / mist |
-| Active / on | cyan |
-| Primary CTA | violet |
-| Battery healthy | green (small chips) |
+| Neutral | grey muted `#9CA3AF` |
+| Active / on | brighter grey `#D1D5DB` |
+| Primary CTA | grey outline on black |
+| Brand hues | **none** — no violet/cyan |
+
+Platform may still show system red/green for errors/battery when Android requires it; **BestROM brand chrome stays black + grey.**
 
 ### 4. Battery care is signature
 1. Charge limit (80 / 85 / 90 / 100)  

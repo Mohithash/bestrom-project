@@ -1,61 +1,53 @@
 # BestROM branding kit
 
-**Ultra minimal · pure dark · dotted letters**  
-Nothing OS–inspired quiet + BestROM battery-first pure black.
+**Nothing OS–like monochrome:** pure **black** + **grey dots** only.
 
 Philosophy: [docs/PHILOSOPHY.md](../docs/PHILOSOPHY.md)  
 Dot type: [design/DOT_TYPE.md](../design/DOT_TYPE.md)
 
-## Promise
+## Palette law (non‑negotiable)
 
-| Priority | Meaning |
-|----------|---------|
-| 1. Battery | Pure black `#000` — pixels off on AMOLED |
-| 2. Pure dark default | No light brand skin |
-| 3. Ultra minimal | Empty space is the design |
-| 4. Dotted identity | Logo / wordmarks = **dot matrix letters** |
-| 5. AOSP | Brand craft on pure AOSP — not a Nothing clone |
+| Allowed | Use |
+|---------|-----|
+| `#000000` black | All backgrounds |
+| Grey `#6B7280` / `#9CA3AF` / `#D1D5DB` | Dots + text + lines |
+
+**No violet. No cyan. No other brand colors.** Ever, in logo / banner / wallpaper / brand chrome.
 
 ## Look
 
 ```
-████████████████████  pure black canvas
-█                    █
-█   · · ·  · · ·     █  dotted B / BESTROM
-█   ·   ·  ·         █  (Nothing-like glyph taste)
-█   · · ·  · · ·     █
-█   ·   ·  ·   ·     █
-█   · · ·  · · ·     █
-█                    █
-████████████████████
+████████████████  black
+█              █
+█  · ·  · · ·  █  grey dots only
+█  ·    ·      █
+█  · ·  · · ·  █
+█  ·    ·   ·  █
+█  · ·  · · ·  █
+█              █
+████████████████
 ```
 
 ## Assets
 
 | File | Treatment |
 |------|-----------|
-| [`logo/bestrom-icon.jpg`](logo/bestrom-icon.jpg) | Dotted **B** on pure black |
-| [`banner/github-banner.jpg`](banner/github-banner.jpg) | Dotted mark / wordmark, vast black |
-| [`wallpaper/bestrom-amoled.jpg`](wallpaper/bestrom-amoled.jpg) | Whisper dots / faint B |
+| [`logo/bestrom-icon.jpg`](logo/bestrom-icon.jpg) | Grey dotted **B** on black |
+| [`banner/github-banner.jpg`](banner/github-banner.jpg) | Grey dotted mark, black field |
+| [`wallpaper/bestrom-amoled.jpg`](wallpaper/bestrom-amoled.jpg) | Whisper grey dots |
 
-## Rules for new art
+## Rules
 
-1. Canvas = **`#000000` only** as default field  
-2. Letters in **logo / brand** = **dots**, not solid fills  
-3. Body UI text stays solid (readable) — dots are for **brand**  
-4. Accent dots: rare violet/cyan, never a rainbow grid  
-5. Inspired by Nothing minimalism — **do not** copy proprietary Nothing fonts/assets  
-6. Empty black margin > busy decoration  
+1. Canvas = black  
+2. Brand letters = **grey dots**  
+3. No hue accents on brand art  
+4. Empty black margin is correct  
+5. Inspired by Nothing minimalism — do not copy proprietary Nothing assets  
 
 ## Copy bank
 
 | Use | Line |
 |-----|------|
-| Tagline | Android, refined. Battery first. Pure dark. Dotted quiet. |
-| One-liner | Ultra minimal. Pure dark. Dotted marks. More battery. Pure AOSP 17. |
-| Pitch | A17 daily driver: Nothing-level quiet, pure black battery UI, AOSP base. |
-| Anti-pitch | Not a heavy skin. Not a Nothing clone. Not light chrome. |
-
-## Tokens
-
-[`../design/tokens.css`](../design/tokens.css) · [`../design/DESIGN_SYSTEM.md`](../design/DESIGN_SYSTEM.md)
+| Tagline | Black. Grey dots. Battery first. |
+| One-liner | Ultra minimal monochrome. Pure AOSP 17. |
+| Pitch | Nothing-like quiet: black + grey dots, AOSP daily driver. |

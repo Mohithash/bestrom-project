@@ -1,50 +1,44 @@
 /**
- * BestROM 17 — Aurora Night (Battery) design tokens
- * Pure-black first for AMOLED power savings.
- * Use in docs sites, GitHub Pages, and as reference for SystemUI / Settings themes.
+ * BestROM 17 — monochrome brand tokens
+ * ONLY pure black + greys (Nothing OS–like).
+ * No violet, cyan, or other accent hues in brand UI.
  */
 :root {
-  /* Canvas — battery first */
+  /* Canvas */
   --br-black: #000000;
-  --br-void: #0b0614;
   --br-ink: #0a0a0a;
-  --br-deep: #14082a;
 
-  /* Accents — sparks only, never full-screen floods */
-  --br-violet: #7c3aed;
-  --br-violet-glow: #a78bfa;
-  --br-cyan: #22d3ee;
-
-  /* Type + dot matrix brand */
-  --br-mist: #e2e8f0;
-  --br-dot: #e2e8f0;
-  --br-muted: #94a3b8;
+  /* Greys only (dots + type + lines) */
+  --br-dot: #9ca3af;
+  --br-dot-bright: #d1d5db;
+  --br-dot-dim: #6b7280;
+  --br-mist: #d1d5db;
+  --br-muted: #9ca3af;
   --br-line: #1a1a1a;
+  --br-line-soft: #262626;
 
-  /* Status */
-  --br-danger: #f43f5e;
-  --br-ok: #34d399;
+  /* Legacy aliases → greys (no hue) */
+  --br-void: #000000;
+  --br-deep: #0a0a0a;
+  --br-violet: #9ca3af;
+  --br-violet-glow: #d1d5db;
+  --br-cyan: #d1d5db;
+  --br-danger: #9ca3af;
+  --br-ok: #d1d5db;
 
-  /* Gradients — brand marks / boot only */
-  --br-grad-brand: linear-gradient(135deg, #000000 0%, #1a0a3e 55%, #7c3aed 100%);
-  --br-grad-mesh: radial-gradient(ellipse at 15% 10%, #7c3aed22, transparent 40%),
-    radial-gradient(ellipse at 85% 80%, #22d3ee18, transparent 35%), #000000;
-
-  /* Glass — dark, low luminance */
-  --br-glass: rgba(0, 0, 0, 0.72);
-  --br-glass-border: rgba(124, 58, 237, 0.18);
+  --br-grad-brand: #000000;
+  --br-grad-mesh: #000000;
+  --br-glass: rgba(0, 0, 0, 0.85);
+  --br-glass-border: rgba(156, 163, 175, 0.2);
 
   --br-radius-card: 16px;
   --br-radius-pill: 999px;
   --br-font: "Inter", "Roboto", system-ui, sans-serif;
   --br-mono: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
-
-  /* Motion — keep GPU cheap */
   --br-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --br-dur: 200ms;
 }
 
-/* Default product shell = pure black */
 html,
 body,
 body.bestrom-dark {
@@ -54,24 +48,25 @@ body.bestrom-dark {
 }
 
 .bestrom-btn {
-  background: var(--br-violet);
+  background: var(--br-black);
   color: var(--br-mist);
-  border: none;
+  border: 1px solid var(--br-dot-dim);
   border-radius: var(--br-radius-pill);
   padding: 0.75rem 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: opacity var(--br-dur) var(--br-ease);
+  transition: border-color var(--br-dur) var(--br-ease), color var(--br-dur) var(--br-ease);
 }
 
 .bestrom-btn:hover {
-  opacity: 0.92;
+  border-color: var(--br-dot-bright);
+  color: var(--br-dot-bright);
 }
 
-/* Prefer solid violet CTA over bright multi-stop gradients for less average luminance */
 .bestrom-btn-brand {
-  background: var(--br-grad-brand);
-  color: #fff;
+  background: var(--br-black);
+  color: var(--br-dot-bright);
+  border: 1px solid var(--br-dot);
 }
 
 .bestrom-card {
@@ -85,40 +80,17 @@ body.bestrom-dark {
   background: var(--br-glass);
   border: 1px solid var(--br-glass-border);
   border-radius: var(--br-radius-card);
-  backdrop-filter: blur(12px);
   padding: 1.25rem;
 }
 
 .bestrom-accent {
-  color: var(--br-cyan);
+  color: var(--br-dot-bright);
 }
 
 .bestrom-muted {
   color: var(--br-muted);
 }
 
-/* Dot-matrix brand feel (docs / landing only — not system font) */
-.bestrom-dot-mark {
-  letter-spacing: 0.35em;
-  font-weight: 400;
-  color: var(--br-dot);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-}
-
-.bestrom-dot-mark::after {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  margin-left: 0.5rem;
-  border-radius: 50%;
-  background: var(--br-cyan);
-  vertical-align: middle;
-  opacity: 0.7;
-}
-
-/* Battery settings signature panel */
 .bestrom-battery-panel {
   background: var(--br-black);
   border: 1px solid var(--br-line);
@@ -127,12 +99,19 @@ body.bestrom-dark {
 }
 
 .bestrom-battery-panel h2 {
-  color: var(--br-cyan);
-  font-weight: 600;
+  color: var(--br-dot-bright);
+  font-weight: 500;
   margin: 0 0 0.5rem;
 }
 
-/* Power-save hint: kill decorative blur */
+.bestrom-dot-mark {
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  color: var(--br-dot);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bestrom-card-glass {
     backdrop-filter: none;

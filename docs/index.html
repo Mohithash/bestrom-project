@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="BestROM — pure AOSP 17. Battery first. Smooth by restraint." />
-  <title>BestROM — Battery first · AOSP 17</title>
+  <meta name="description" content="BestROM — pure AOSP 17. Black and grey dots only. Battery first." />
+  <title>BestROM — black · grey dots · AOSP 17</title>
   <link rel="stylesheet" href="../design/tokens.css" />
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(ellipse at 12% 8%, #7c3aed18, transparent 38%),
-        radial-gradient(ellipse at 88% 78%, #22d3ee12, transparent 32%),
-        #000000;
-      color: var(--br-mist);
+      background: #000000;
+      color: #d1d5db;
       font-family: var(--br-font);
     }
     .wrap { max-width: 920px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
@@ -26,23 +23,23 @@
     }
     h1 {
       font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.03em;
       margin: 1rem 0 0.35rem;
-      color: var(--br-mist);
+      color: #d1d5db;
     }
-    .tag { color: var(--br-muted); font-size: 1.05rem; line-height: 1.5; }
+    .tag { color: #9ca3af; font-size: 1.05rem; line-height: 1.5; }
     .banner {
       width: 100%; border-radius: 16px; margin: 1.5rem 0;
       border: 1px solid #1a1a1a;
     }
     .philosophy {
-      border-left: 3px solid var(--br-cyan);
+      border-left: 2px solid #9ca3af;
       padding: 0.25rem 0 0.25rem 1.25rem;
       margin: 1.5rem 0;
     }
-    .philosophy p { margin: 0.5rem 0; color: var(--br-mist); line-height: 1.55; }
-    .philosophy strong { color: var(--br-cyan); }
+    .philosophy p { margin: 0.5rem 0; color: #d1d5db; line-height: 1.55; }
+    .philosophy strong { color: #d1d5db; }
     .grid {
       display: grid;
       gap: 1rem;
@@ -53,7 +50,7 @@
       text-decoration: none; color: inherit;
       transition: border-color 0.2s ease;
     }
-    a.card:hover { border-color: var(--br-cyan); }
+    a.card:hover { border-color: #9ca3af; }
     .swatches { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
     .swatch {
       width: 48px; height: 48px; border-radius: 12px;
@@ -67,11 +64,11 @@
       text-align: left; padding: 0.55rem 0.4rem;
       border-bottom: 1px solid #1a1a1a;
     }
-    th { color: var(--br-muted); font-weight: 500; }
+    th { color: #9ca3af; font-weight: 500; }
     footer {
-      margin-top: 3rem; text-align: center; color: var(--br-muted); font-size: 0.85rem;
+      margin-top: 3rem; text-align: center; color: #6b7280; font-size: 0.85rem;
     }
-    code { color: var(--br-cyan); font-family: var(--br-mono); font-size: 0.9em; }
+    code { color: #9ca3af; font-family: var(--br-mono); font-size: 0.9em; }
   </style>
 </head>
 <body class="bestrom-dark">
@@ -79,85 +76,64 @@
     <header class="hero">
       <img class="logo" src="../brand/logo/bestrom-icon.jpg" alt="BestROM" />
       <h1>BestROM</h1>
-      <p class="tag">Pure AOSP 17 · ultra minimal · pure dark · dotted marks</p>
+      <p class="tag">Pure AOSP 17 · black + grey dots only · battery first</p>
       <img class="banner" src="../brand/banner/github-banner.jpg" alt="BestROM banner" />
     </header>
 
     <section class="bestrom-card philosophy">
-      <p><strong>Battery first. Ultra minimal. Pure dark. Dotted identity.</strong></p>
+      <p><strong>Black. Grey dots. Nothing else.</strong></p>
       <p>
-        Modern Android spends too much on cosmetic skins, animations, artworks,
-        and placebo effects — that tax steals smoothness, fluidity, and battery juice.
+        Like <strong>Nothing OS</strong>: ultra minimal, empty space, dotted letter craft.
+        Brand colors are only <strong>pure black</strong> and <strong>greys</strong> —
+        no violet, no cyan, no rainbow skins.
       </p>
       <p>
-        Like <strong>Nothing OS</strong> quiet: empty space and <strong>dotted letter</strong> craft.
-        Unlike light/gray skins: we ship <strong>pure black by default</strong> for AMOLED battery.
-        Base is <strong>pure AOSP 17</strong> — not a clone, not a heavy skin.
+        Base is <strong>pure AOSP 17</strong>. Goal is battery + real smoothness, not cosmetic tax.
       </p>
       <p class="bestrom-dot-mark" style="margin-top:1.25rem">BestROM</p>
-      <p style="color:var(--br-muted);font-size:0.95rem;margin-top:0.75rem">
-        Ultra minimal. Pure dark. Dotted marks. More battery. Still Android — pure AOSP 17.
-      </p>
     </section>
 
     <section class="bestrom-card" style="margin-top:1rem">
-      <h2 style="margin-top:0;font-size:1.15rem">What we refuse / build</h2>
-      <table>
-        <thead><tr><th>Refuse</th><th>Build</th></tr></thead>
-        <tbody>
-          <tr><td>Heavy skins</td><td>Pure AOSP 17 base</td></tr>
-          <tr><td>Animation theater</td><td>Light, fluid system</td></tr>
-          <tr><td>Artwork walls</td><td>Pure black AMOLED UI</td></tr>
-          <tr><td>Placebo toggles</td><td>Honest thrifty controls</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="bestrom-card" style="margin-top:1rem">
-      <h2 style="margin-top:0;font-size:1.15rem">Aurora Night palette</h2>
-      <p class="tag">Pure black canvas · violet/cyan sparks only</p>
+      <h2 style="margin-top:0;font-size:1.15rem;color:#d1d5db">Allowed palette</h2>
       <div class="swatches">
         <div class="swatch" style="background:#000000" title="black"></div>
-        <div class="swatch" style="background:#0B0614" title="void"></div>
-        <div class="swatch" style="background:#7C3AED" title="violet"></div>
-        <div class="swatch" style="background:#22D3EE" title="cyan"></div>
-        <div class="swatch" style="background:#E2E8F0" title="mist"></div>
+        <div class="swatch" style="background:#1a1a1a" title="line"></div>
+        <div class="swatch" style="background:#6b7280" title="dot dim"></div>
+        <div class="swatch" style="background:#9ca3af" title="dot"></div>
+        <div class="swatch" style="background:#d1d5db" title="dot bright"></div>
       </div>
+      <p class="tag" style="margin-top:0.75rem">That is the full brand color system.</p>
     </section>
 
     <div class="grid">
       <a class="bestrom-card card" href="PHILOSOPHY.md">
         <strong class="bestrom-accent">Philosophy</strong>
-        <p class="tag">Battery · smoothness · AOSP</p>
-      </a>
-      <a class="bestrom-card card" href="../design/DESIGN_SYSTEM.md">
-        <strong class="bestrom-accent">Design system</strong>
-        <p class="tag">Tokens · pure dark · minimal</p>
+        <p class="tag">Battery · monochrome · AOSP</p>
       </a>
       <a class="bestrom-card card" href="../design/DOT_TYPE.md">
         <strong class="bestrom-accent">Dot type</strong>
-        <p class="tag">Dotted B · Nothing-inspired</p>
+        <p class="tag">Grey dotted letters</p>
       </a>
-      <a class="bestrom-card card" href="BATTERY_UI.md">
-        <strong class="bestrom-accent">Battery UI / UX</strong>
-        <p class="tag">Screens · charge limit</p>
+      <a class="bestrom-card card" href="../design/DESIGN_SYSTEM.md">
+        <strong class="bestrom-accent">Design system</strong>
+        <p class="tag">Black + greys only</p>
       </a>
       <a class="bestrom-card card" href="../brand/README.md">
         <strong class="bestrom-accent">Branding kit</strong>
         <p class="tag">Logo · banner · wallpaper</p>
       </a>
-      <a class="bestrom-card card" href="FEATURES.md">
-        <strong class="bestrom-accent">Features</strong>
-        <p class="tag">Roadmap phases</p>
+      <a class="bestrom-card card" href="BATTERY_UI.md">
+        <strong class="bestrom-accent">Battery UI</strong>
+        <p class="tag">Dark defaults</p>
       </a>
       <a class="bestrom-card card" href="https://sourceforge.net/projects/bestrom/">
         <strong class="bestrom-accent">Downloads</strong>
-        <p class="tag">SourceForge bestrom</p>
+        <p class="tag">SourceForge</p>
       </a>
     </div>
 
     <footer>
-      BestROM · Android, refined. Battery first. · <code>peridot</code>
+      BestROM · black · grey dots · <code>peridot</code>
     </footer>
   </div>
 </body>
