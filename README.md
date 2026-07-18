@@ -33,12 +33,13 @@ We are building toward one of the **first custom ROMs on Android 17** whose dail
 |--|--|
 | **Android** | 17 · API 37 · `android-17.0.0_r1` |
 | **North star** | **Battery first** — then smoothness, then everything else |
-| **Design** | **Aurora Night** — pure black `#000` + sparse violet/cyan |
+| **Design** | **Pure dark by default** — black `#000` + sparse violet/cyan |
+| **UI default** | Dark only from first boot — no light product skin |
 | **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
 | **Status** | Brand + scaffold live · device bring-up next |
 | **Goal** | Clean AOSP daily driver — thrifty, fluid, honest |
 
-> Tagline: **Android, refined. Battery first.**
+> Tagline: **Android, refined. Battery first. Pure dark by default.**
 
 ---
 
@@ -82,17 +83,18 @@ If the answer is “it looks cool in a trailer,” it does not ship as a default
 | We ship | Why |
 |---------|-----|
 | **Pure AOSP 17 base** | Clean path, fewer surprise layers, real compliance |
-| **Battery-first dark UI** | True black canvas on AMOLED; light is not the product |
+| **Pure dark by default** | `#000000` canvas on AMOLED — light is not a product goal |
 | **Sparse craft** | Violet/cyan as *sparks*, not full-screen decoration |
 | **Thrifty controls** | Charge limit, refresh sense, power-save that cuts *cost* |
 | **Daily-driver honesty** | Radio, camera, stability over screenshot features |
 
-**BestROM** = AOSP soul + product restraint.  
-Not another ROM that pretends more chrome equals more quality.
+**BestROM** = AOSP soul + product restraint + **pure black defaults**.  
+
+We like *minimal product thinking* (few loud features, clear identity) — but minimal that still ships light gray or dual light/dark chrome still lights the panel. **Pure dark backgrounds and designs by default** are better for battery than light “premium” UIs or half-dark skins. Restraint only counts if the pixels stay off.
 
 ### In one line
 
-> *Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
+> *Pure dark by default. Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
 
 **Full philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
 **UI / UX:** [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · **Design system:** [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)  
@@ -100,15 +102,18 @@ Not another ROM that pretends more chrome equals more quality.
 
 ---
 
-## Visual language — dark for battery
+## Visual language — pure dark by default
+
+**Default = pure dark.** Not an optional theme. Not Material gray. Not light mode with a night switch for v1.
 
 Every default UI choice asks: *does this waste AMOLED power or compositor budget?*
 
 | Law | Meaning |
 |-----|---------|
-| Pure black canvas | `#000000` primary backgrounds (pixels off) |
+| Pure black canvas | `#000000` primary backgrounds (pixels off) — **always** |
+| No light product skin | Dark-only from Setup → home → Settings → QS |
 | Accents are sparks | Violet / cyan only on active states — not full-screen floods |
-| Dark is the product | Not a half-supported light theme; battery leads the look |
+| Dark beats gray “minimal” | Lit gray still costs OLED power; black wins battery |
 | Controls match the look | Charge limit, refresh thrift, power-save that dims real cost |
 | Motion stays cheap | Short, purposeful — not forever-on effects |
 
@@ -193,5 +198,5 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ---
 
 <p align="center">
-  <sub>BestROM · battery first · smooth by restraint · pure AOSP 17 · peridot first</sub>
+  <sub>BestROM · pure dark by default · battery first · pure AOSP 17 · peridot first</sub>
 </p>

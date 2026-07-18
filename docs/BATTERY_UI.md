@@ -24,11 +24,14 @@ Design tokens: [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)
 
 ## UX pillars
 
-### 1. Dark is the product
-Settings, SystemUI, Setup, QS: **dark by default**. Light theme is not a v1 goal.
+### 1. Pure dark by default (non‑negotiable)
+Settings, SystemUI, Setup, QS, wallpaper: **pure dark from first boot**.  
+Light theme is **not** a v1 product goal. Dual light/dark parity is **not** a goal.
 
-### 2. Pure black over Material gray
-Wallpaper, shade empty regions, Settings root → `#000000`. Cards may use `#0A0A0A` only for separation.
+### 2. Pure black over Material gray (and over “minimal” light)
+Wallpaper, shade empty regions, Settings root → **`#000000`**.  
+Cards may use `#0A0A0A` only for separation — never light gray panels as brand default.  
+Pure dark defaults are **better for battery** than light chrome or soft-gray dark skins.
 
 ### 3. Accents are status
 | State | Color |

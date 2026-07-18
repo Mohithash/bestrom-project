@@ -3,7 +3,7 @@
 **Version:** 17.0 · **Codename:** Aurora Night  
 **Platform:** Pure AOSP Android 17 · **First device:** peridot  
 
-**Philosophy:** [docs/PHILOSOPHY.md](../docs/PHILOSOPHY.md) — **battery first**, then smoothness, AOSP-compliant daily driver.
+**Philosophy:** [docs/PHILOSOPHY.md](../docs/PHILOSOPHY.md) — **battery first**, **pure dark by default**, then smoothness, AOSP-compliant daily driver.
 
 ---
 
@@ -12,14 +12,18 @@
 | Pillar | Meaning |
 |--------|---------|
 | **Battery** | Primary feature. Pure black, thrifty defaults, no cosmetic milliwatt tax |
+| **Pure dark** | **Default = `#000000`.** Not gray Material dark. Not light + night toggle for v1 |
 | **Smoothness** | Light stack — fluid because it is restrained, not because of fake motion |
-| **Night** | Dark is the product; light theme is not a v1 goal |
 | **AOSP** | Pure Android 17 path — brand overlays, not a heavy skin OS |
 
 **Taglines**
-- *Android, refined. Battery first.*
-- *Less cosmetic tax. More battery. More smoothness.*
+- *Android, refined. Battery first. Pure dark by default.*
+- *Pure dark by default. Less cosmetic tax. More battery. More smoothness.*
 - *Pure AOSP 17 — daily driver, not decoration.*
+
+### Pure dark beats “minimal light” and gray dark
+
+Restraint that still uses light or soft-gray UI still costs OLED power. BestROM’s bar is higher: **pure dark backgrounds and designs by default** — better for battery than light premium UIs or incomplete dark themes.
 
 ---
 

@@ -22,15 +22,16 @@ First ship is **bring-up**. Features below ship after a bootable peridot build �
 - [ ] Audio, Bluetooth, Wi‑Fi as hardware allows
 - [ ] Thermal & charging sane defaults
 
-## Phase 2 — Identity without cosmetic tax
+## Phase 2 — Pure dark by default (identity)
 
-- [ ] Dark-only product theme (Settings / SystemUI / Setup)
-- [ ] Pure black wallpaper pack
+- [ ] **Pure dark only** product theme (Settings / SystemUI / Setup) — no light default
+- [ ] **`#000000` pure black** wallpaper as default pack
 - [ ] Black-led boot animation (short, sparse)
 - [ ] QS / shade: black scrim, cyan active — no rainbow skins
 - [ ] SetupWizard: zero light full-bleed pages
+- [ ] Force / strong default night mode props where AOSP allows
 - [ ] `ro.bestrom.*` props + About branding
-- [ ] Specs: [BATTERY_UI.md](BATTERY_UI.md) · [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)
+- [ ] Specs: [BATTERY_UI.md](BATTERY_UI.md) · [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md) · [PHILOSOPHY.md](PHILOSOPHY.md)
 
 ## Phase 3 — Real battery craft (not placebo)
 
@@ -57,7 +58,9 @@ First ship is **bring-up**. Features below ship after a bootable peridot build �
 - Heavy cosmetic skins competing with AOSP  
 - Animation packs / artwork walls as defaults  
 - Placebo “boosters” that don’t move battery or frames  
-- Equal investment in light + dark themes in v1  
+- **Light theme as equal default** (or dual light/dark parity in v1)  
+- Soft-gray “Material dark” pretending to be battery-first  
+
 
 ---
 

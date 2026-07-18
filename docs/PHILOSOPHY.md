@@ -35,6 +35,24 @@ We are building toward one of the **first custom ROMs on Android 17** whose prom
 
 > **Best battery + real smoothness — without the cosmetic tax.**
 
+## Pure dark by default (non‑negotiable)
+
+**Every surface ships pure dark.** Not “dark gray Material,” not a light theme with a night toggle, not dual skins we half-maintain.
+
+| Default | Spec |
+|---------|------|
+| Canvas | **`#000000` pure black** (AMOLED pixels off) |
+| Theme | **Dark only** as the product |
+| Wallpaper | Pure black pack |
+| Setup / Settings / QS | Black backgrounds from first boot |
+| Accents | Tiny violet/cyan *sparks* — never bright full screens |
+
+**Why pure black beats “pretty dark gray” and light “minimal” UIs:** on OLED, lit gray still costs power. Restraint that still paints the panel light is incomplete restraint.
+
+We admire **product restraint** (few features, clear identity) — but BestROM goes further for battery: **pure dark backgrounds and designs by default**, so the software matches AMOLED hardware. Less light in the UI is not a theme option; it is the brand.
+
+> *Pure dark by default. Better for battery than light skins, gray “minimal,” or cosmetic nothing.*
+
 ## Three questions (every default)
 
 Before something ships as a **default**:
@@ -50,14 +68,16 @@ If the answer is only “it looks cool,” it does not ship as default.
 | We refuse | We build |
 |-----------|----------|
 | Heavy cosmetic skins | Pure AOSP 17 base |
+| Light / dual themes as equal defaults | **Pure dark only** product UI |
+| Gray “Material dark” walls | **True black** `#000000` canvas |
 | Animation for show | Short, purposeful motion |
-| Artwork walls & bright chrome | Pure black AMOLED canvas |
+| Artwork walls & bright chrome | Sparse sparks on black |
 | Placebo toggles | Honest thrifty controls |
 | Everything-maxed defaults | Daily-driver sanity |
 
 ## One line
 
-> *Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
+> *Pure dark by default. Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
 
 ## Related
 
