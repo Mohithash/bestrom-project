@@ -62,10 +62,10 @@ Device (e.g. GuidixX peridot)
 ## Lessons from “Nothing”
 
 ### Product (Nothing Phone / Nothing OS *taste*)
-- One strong visual identity (for us: **Aurora Night**)
+- One strong visual identity (for us: **Aurora Night — battery-first dark**)
 - Minimal UI, few signature features — not 40 half-baked toggles
-- Clear story: hardware + software messaging
-- Restraint > bloat
+- Clear story: **AMOLED pure black + thrifty defaults** (charge limit, RR)
+- Restraint > bloat; **dark is the product**, not an optional skin
 
 ### From nothing (pure AOSP)
 ```
@@ -114,12 +114,18 @@ NothingOS source is **not** your base. AOSP is.
 - [ ] Updater JSON or static release notes
 - [ ] Known-issues wiki
 
+### Phase 2b — Battery-first UI (parallel to bring-up)
+- [ ] Dark-only product theme intent (Settings / SystemUI / Setup)
+- [ ] Pure black wallpaper + bootanim (low luminance)
+- [ ] Battery care UX: charge limit, RR thrift, AOD policy
+- [ ] Specs: [BATTERY_UI.md](BATTERY_UI.md) · [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)
+
 ### Phase 4 — Craft flavors (optional)
 | Flavor | Contents |
 |--------|----------|
-| **Vanilla** | Brand only |
-| **Plus** | Charge limit, refresh tile, light GameSpace-like |
-| **Privacy** | DNS presets, clipboard clear (Nothing-like calm + VOS privacy vibe) |
+| **Vanilla** | Brand + **pure-black dark shell** only |
+| **Plus** | Charge limit, refresh tile, power-save UI hooks, light GameSpace |
+| **Privacy** | DNS presets, clipboard clear — same dark battery shell |
 
 ---
 

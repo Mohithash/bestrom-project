@@ -5,7 +5,7 @@
 <h1 align="center">BestROM</h1>
 
 <p align="center">
-  <strong>Pure AOSP Android 17</strong> · crafted clean · first light on <code>peridot</code>
+  <strong>Pure AOSP Android 17</strong> · <strong>battery-first dark</strong> · first light on <code>peridot</code>
 </p>
 
 <p align="center">
@@ -28,30 +28,39 @@
 | | |
 |--|--|
 | **Android** | 17 · API 37 · `android-17.0.0_r1` |
-| **Design** | **Aurora Night** — void black, violet, cyan |
+| **Design** | **Aurora Night** — pure black `#000` + sparse violet/cyan |
+| **UI north star** | **Battery-first** — dark AMOLED UI by default |
 | **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
 | **Status** | Brand + scaffold live · device bring-up next |
-| **Goal** | Clean base + optional craft flavors |
+| **Goal** | Clean AOSP + dark shell + thrifty battery UX |
 
-> Tagline: **Android, refined.**
+> Tagline: **Android, refined. Battery first.**
 
 ---
 
-## Design
+## Design — dark for battery
 
-We treat BestROM as a **product**, not only a build script.
+We treat BestROM as a **product**: every default UI choice asks *does this waste AMOLED power?*
+
+| Law | Meaning |
+|-----|---------|
+| Pure black canvas | `#000000` primary backgrounds (pixels off) |
+| Accents are sparks | Violet / cyan only on active states — not full-screen floods |
+| Dark is the product | Not a toggle we half-support; light is not a v1 goal |
+| Controls match the look | Charge limit, refresh thrift, power-save that dims cost |
 
 | Asset | Path |
 |-------|------|
 | Design system | [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md) |
 | CSS tokens | [`design/tokens.css`](design/tokens.css) |
+| Battery UI / UX spec | [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) |
+| Feature roadmap | [`docs/FEATURES.md`](docs/FEATURES.md) |
+| Complete ROM roadmap | [`docs/COMPLETE_ROM_ROADMAP.md`](docs/COMPLETE_ROM_ROADMAP.md) |
 | App icon | [`brand/logo/bestrom-icon.jpg`](brand/logo/bestrom-icon.jpg) |
 | GitHub banner | [`brand/banner/github-banner.jpg`](brand/banner/github-banner.jpg) |
 | AMOLED wallpaper | [`brand/wallpaper/bestrom-amoled.jpg`](brand/wallpaper/bestrom-amoled.jpg) |
-| Feature roadmap | [`docs/FEATURES.md`](docs/FEATURES.md) |
-| Complete ROM roadmap | [`docs/COMPLETE_ROM_ROADMAP.md`](docs/COMPLETE_ROM_ROADMAP.md) |
 
-**Palette:** void `#0B0614` · violet `#7C3AED` · cyan `#22D3EE` · mist `#E2E8F0`
+**Palette:** black `#000000` · void `#0B0614` · violet `#7C3AED` · cyan `#22D3EE` · mist `#E2E8F0`
 
 <p align="center">
   <img src="brand/wallpaper/bestrom-amoled.jpg" alt="BestROM wallpaper" width="280" />
@@ -118,5 +127,5 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ---
 
 <p align="center">
-  <sub>BestROM · Aurora · Android 17 · peridot first</sub>
+  <sub>BestROM · Aurora Night · battery-first dark · Android 17 · peridot first</sub>
 </p>
