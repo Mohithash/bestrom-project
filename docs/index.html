@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BestROM — Android 17</title>
+  <link rel="stylesheet" href="../design/tokens.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 15% 10%, #7c3aed33, transparent 40%),
+        radial-gradient(ellipse at 85% 70%, #22d3ee22, transparent 40%),
+        var(--br-void);
+      color: var(--br-mist);
+      font-family: var(--br-font);
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    .hero {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+    }
+    .logo {
+      width: 112px; height: 112px; border-radius: 28px;
+      box-shadow: 0 0 40px #7c3aed66;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 1rem 0 0.35rem;
+      background: var(--br-grad-brand);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .tag { color: var(--br-muted); font-size: 1.05rem; }
+    .banner {
+      width: 100%; border-radius: 20px; margin: 1.5rem 0;
+      border: 1px solid var(--br-glass-border);
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 1.5rem;
+    }
+    a.card {
+      text-decoration: none; color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s;
+    }
+    a.card:hover {
+      transform: translateY(-3px);
+      border-color: var(--br-cyan);
+    }
+    .swatches { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .swatch {
+      width: 48px; height: 48px; border-radius: 12px;
+      border: 1px solid var(--br-glass-border);
+    }
+    footer {
+      margin-top: 3rem; text-align: center; color: var(--br-muted); font-size: 0.85rem;
+    }
+    code { color: var(--br-cyan); font-family: var(--br-mono); font-size: 0.9em; }
+  </style>
+</head>
+<body class="bestrom-dark">
+  <div class="wrap">
+    <header class="hero">
+      <img class="logo" src="../brand/logo/bestrom-icon.jpg" alt="BestROM" />
+      <h1>BestROM</h1>
+      <p class="tag">Pure AOSP Android 17 · Aurora Night · peridot first</p>
+      <img class="banner" src="../brand/banner/github-banner.jpg" alt="Banner" />
+    </header>
+
+    <section class="bestrom-card">
+      <h2 style="margin-top:0">Aurora palette</h2>
+      <p class="tag">Void · violet · cyan — AMOLED-first craft.</p>
+      <div class="swatches">
+        <div class="swatch" style="background:#0B0614" title="void"></div>
+        <div class="swatch" style="background:#1A0A3E" title="deep"></div>
+        <div class="swatch" style="background:#7C3AED" title="violet"></div>
+        <div class="swatch" style="background:#A78BFA" title="glow"></div>
+        <div class="swatch" style="background:#22D3EE" title="cyan"></div>
+        <div class="swatch" style="background:#E2E8F0" title="mist"></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <a class="bestrom-card card" href="../design/DESIGN_SYSTEM.md">
+        <strong class="bestrom-accent">Design system</strong>
+        <p class="tag">Tokens, type, motion, do/don’t</p>
+      </a>
+      <a class="bestrom-card card" href="FEATURES.md">
+        <strong class="bestrom-accent">Features</strong>
+        <p class="tag">Roadmap phases 0 → 3</p>
+      </a>
+      <a class="bestrom-card card" href="https://github.com/Mohithash/bestrom_manifest/tree/17">
+        <strong class="bestrom-accent">Manifest</strong>
+        <p class="tag">repo init · local_manifest</p>
+      </a>
+      <a class="bestrom-card card" href="https://sourceforge.net/projects/bestrom/">
+        <strong class="bestrom-accent">Downloads</strong>
+        <p class="tag">SourceForge bestrom</p>
+      </a>
+    </div>
+
+    <footer>
+      BestROM · Android, refined. · <code>peridot</code>
+    </footer>
+  </div>
+</body>
+</html>

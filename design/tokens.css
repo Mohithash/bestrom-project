@@ -1,0 +1,53 @@
+/**
+ * BestROM 17 — Aurora Night design tokens
+ * Use in GitHub Pages, docs sites, or future Settings themes.
+ */
+:root {
+  --br-void: #0b0614;
+  --br-deep: #1a0a3e;
+  --br-violet: #7c3aed;
+  --br-violet-glow: #a78bfa;
+  --br-cyan: #22d3ee;
+  --br-mist: #e2e8f0;
+  --br-muted: #94a3b8;
+  --br-line: #2e1065;
+  --br-danger: #f43f5e;
+  --br-ok: #34d399;
+
+  --br-grad-brand: linear-gradient(135deg, #1a0a3e 0%, #7c3aed 50%, #22d3ee 100%);
+  --br-glass: rgba(26, 10, 62, 0.55);
+  --br-glass-border: rgba(167, 139, 250, 0.25);
+
+  --br-radius-card: 16px;
+  --br-radius-pill: 999px;
+  --br-font: "Inter", "Roboto", system-ui, sans-serif;
+  --br-mono: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+}
+
+body.bestrom-dark {
+  background: var(--br-void);
+  color: var(--br-mist);
+  font-family: var(--br-font);
+}
+
+.bestrom-btn {
+  background: var(--br-grad-brand);
+  color: white;
+  border: none;
+  border-radius: var(--br-radius-pill);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bestrom-card {
+  background: var(--br-glass);
+  border: 1px solid var(--br-glass-border);
+  border-radius: var(--br-radius-card);
+  backdrop-filter: blur(12px);
+  padding: 1.25rem;
+}
+
+.bestrom-accent {
+  color: var(--br-cyan);
+}
