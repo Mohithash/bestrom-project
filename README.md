@@ -5,7 +5,7 @@
 <h1 align="center">BestROM</h1>
 
 <p align="center">
-  <strong>Pure AOSP Android 17</strong> · black + grey dots · battery first · <code>peridot</code>
+  Pure AOSP 17 · battery-focused · black / grey UI · POCO F6 (<code>peridot</code>)
 </p>
 
 <p align="center">
@@ -23,23 +23,17 @@
 
 ## What is BestROM?
 
-**BestROM** is a **pure AOSP Android 17** custom ROM — not Lineage, not VoltageOS, not another heavy skin.
-
-We are building toward one of the **first custom ROMs on Android 17** whose daily-driver promise is simple:
-
-> **Best battery life + real smoothness — AOSP-compliant, without the cosmetic tax.**
+Hobby **pure AOSP Android 17** ROM. Priority is **battery** and a small, dark UI — not skins or feature bloat.
 
 | | |
 |--|--|
-| **Android** | 17 · API 37 · `android-17.0.0_r1` |
-| **North star** | **Battery first** — then smoothness, then everything else |
-| **Design** | **Nothing-like monochrome** — black + **grey dots** only |
-| **UI default** | Pure black from first boot — no light skin, no brand rainbow |
-| **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
-| **Status** | Brand + scaffold live · device bring-up next |
-| **Goal** | Clean AOSP daily driver — thrifty, fluid, honest |
+| Android | 17 · AOSP |
+| Focus | Battery · smooth daily use |
+| UI | Black background · grey accents/dots only |
+| Device | POCO F6 / Redmi Turbo 3 (`peridot`) first |
+| Status | WIP — trees & brand public; A17 bring-up ongoing |
 
-> Tagline: **Black. Grey dots. Battery first.**
+More: [About](docs/ABOUT.md) · [Philosophy](docs/PHILOSOPHY.md)
 
 ---
 
