@@ -46,12 +46,13 @@ We are building toward one of the **first custom ROMs on Android 17** whose prom
 | Wallpaper | Pure black pack |
 | Setup / Settings / QS | Black backgrounds from first boot |
 | Accents | Tiny violet/cyan *sparks* — never bright full screens |
+| Brand marks | **Dotted** B / BESTROM (Nothing-inspired), not solid chrome logos |
 
 **Why pure black beats “pretty dark gray” and light “minimal” UIs:** on OLED, lit gray still costs power. Restraint that still paints the panel light is incomplete restraint.
 
-We admire **product restraint** (few features, clear identity) — but BestROM goes further for battery: **pure dark backgrounds and designs by default**, so the software matches AMOLED hardware. Less light in the UI is not a theme option; it is the brand.
+We admire **Nothing OS–style ultra minimalism** (quiet UI, empty space, **dotted letter craft**) — but BestROM is **not** Nothing: base is **pure AOSP 17**, and we go further for battery with **pure black defaults** (not light/gray product chrome). Brand marks use **dotted letters** so logos light fewer pixels than solid filled wordmarks.
 
-> *Pure dark by default. Better for battery than light skins, gray “minimal,” or cosmetic nothing.*
+> *Ultra minimal. Pure dark by default. Dotted identity. Better for battery than heavy skins or light “premium” UIs.*
 
 ## Three questions (every default)
 
@@ -77,10 +78,11 @@ If the answer is only “it looks cool,” it does not ship as default.
 
 ## One line
 
-> *Pure dark by default. Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
+> *Ultra minimal. Pure dark. Dotted marks. Less cosmetic tax. More battery. Still Android — pure AOSP 17.*
 
 ## Related
 
 - [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)  
+- [DOT_TYPE.md](../design/DOT_TYPE.md)  
 - [BATTERY_UI.md](BATTERY_UI.md)  
 - [FEATURES.md](FEATURES.md)  

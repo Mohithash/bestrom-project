@@ -33,8 +33,8 @@ We are building toward one of the **first custom ROMs on Android 17** whose dail
 |--|--|
 | **Android** | 17 · API 37 · `android-17.0.0_r1` |
 | **North star** | **Battery first** — then smoothness, then everything else |
-| **Design** | **Pure dark by default** — black `#000` + sparse violet/cyan |
-| **UI default** | Dark only from first boot — no light product skin |
+| **Design** | **Ultra minimal** · pure black · **dotted** B / BESTROM (Nothing-inspired) |
+| **UI default** | Pure dark only from first boot — no light product skin |
 | **First device** | Xiaomi **POCO F6 / Redmi Turbo 3** (`peridot`) |
 | **Status** | Brand + scaffold live · device bring-up next |
 | **Goal** | Clean AOSP daily driver — thrifty, fluid, honest |
@@ -90,13 +90,14 @@ If the answer is “it looks cool in a trailer,” it does not ship as a default
 
 **BestROM** = AOSP soul + product restraint + **pure black defaults**.  
 
-We like *minimal product thinking* (few loud features, clear identity) — but minimal that still ships light gray or dual light/dark chrome still lights the panel. **Pure dark backgrounds and designs by default** are better for battery than light “premium” UIs or half-dark skins. Restraint only counts if the pixels stay off.
+We take the same *taste* as **Nothing OS**: **ultra minimal**, empty space, **dotted letter** identity — quiet product, not a skin circus. We are **not** Nothing: stack is **pure AOSP 17**, and defaults are **pure black** for battery (Not light/gray chrome). Logos and brand marks use **dot-matrix letters** so the mark itself stays thrifty on AMOLED.
 
 ### In one line
 
-> *Pure dark by default. Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
+> *Ultra minimal. Pure dark. Dotted marks. Less cosmetic tax. More battery. Still Android — pure AOSP 17.*
 
 **Full philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
+**Dot type:** [`design/DOT_TYPE.md`](design/DOT_TYPE.md)  
 **UI / UX:** [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · **Design system:** [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)  
 **Branding kit:** [`brand/README.md`](brand/README.md)
 
@@ -111,17 +112,19 @@ Every default UI choice asks: *does this waste AMOLED power or compositor budget
 | Law | Meaning |
 |-----|---------|
 | Pure black canvas | `#000000` primary backgrounds (pixels off) — **always** |
+| Ultra minimal | Empty space > decoration (Nothing-like quiet) |
+| Dotted brand marks | B / BESTROM as **dot matrix**, not solid fill logos |
 | No light product skin | Dark-only from Setup → home → Settings → QS |
 | Accents are sparks | Violet / cyan only on active states — not full-screen floods |
 | Dark beats gray “minimal” | Lit gray still costs OLED power; black wins battery |
-| Controls match the look | Charge limit, refresh thrift, power-save that dims real cost |
-| Motion stays cheap | Short, purposeful — not forever-on effects |
+| Motion stays cheap | Short assemble of dots — not forever light shows |
 
 | Asset | Path |
 |-------|------|
 | **Philosophy** | [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) |
 | Branding kit index | [`brand/README.md`](brand/README.md) |
 | Design system | [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md) |
+| Dot type (logo letters) | [`design/DOT_TYPE.md`](design/DOT_TYPE.md) |
 | CSS tokens | [`design/tokens.css`](design/tokens.css) |
 | Battery UI / UX | [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) |
 | Feature roadmap | [`docs/FEATURES.md`](docs/FEATURES.md) |
@@ -198,5 +201,5 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ---
 
 <p align="center">
-  <sub>BestROM · pure dark by default · battery first · pure AOSP 17 · peridot first</sub>
+  <sub>BestROM · ultra minimal · pure dark · dotted · pure AOSP 17 · peridot first</sub>
 </p>

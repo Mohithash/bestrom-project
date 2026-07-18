@@ -1,54 +1,61 @@
 # BestROM branding kit
 
-**Pure dark by default** — the visual face of a **battery-first** AOSP 17 ROM.
+**Ultra minimal · pure dark · dotted letters**  
+Nothing OS–inspired quiet + BestROM battery-first pure black.
 
-Philosophy: [docs/PHILOSOPHY.md](../docs/PHILOSOPHY.md)
+Philosophy: [docs/PHILOSOPHY.md](../docs/PHILOSOPHY.md)  
+Dot type: [design/DOT_TYPE.md](../design/DOT_TYPE.md)
 
 ## Promise
 
 | Priority | Meaning |
 |----------|---------|
-| 1. Battery | Pure black `#000` canvas — pixels off on AMOLED |
-| 2. Pure dark default | No light brand skin; dark from first impression |
-| 3. Smoothness | No cosmetic GPU tax |
-| 4. AOSP | Brand overlays — not a heavy skin stack |
+| 1. Battery | Pure black `#000` — pixels off on AMOLED |
+| 2. Pure dark default | No light brand skin |
+| 3. Ultra minimal | Empty space is the design |
+| 4. Dotted identity | Logo / wordmarks = **dot matrix letters** |
+| 5. AOSP | Brand craft on pure AOSP — not a Nothing clone |
 
-## Why pure dark (not “nice gray” or light minimal)
+## Look
 
-| Approach | On AMOLED |
-|----------|-----------|
-| Light / off-white UI | Worst — panel fully driven |
-| Soft gray “minimal” dark | Still lights most pixels |
-| **Pure black `#000000`** | **Best** — many pixels off |
-
-Product restraint without pure black is incomplete for battery. BestROM defaults are **pure dark backgrounds and designs** — better for endurance than light premium skins or dual-theme chrome.
+```
+████████████████████  pure black canvas
+█                    █
+█   · · ·  · · ·     █  dotted B / BESTROM
+█   ·   ·  ·         █  (Nothing-like glyph taste)
+█   · · ·  · · ·     █
+█   ·   ·  ·   ·     █
+█   · · ·  · · ·     █
+█                    █
+████████████████████
+```
 
 ## Assets
 
-| File | Use | Rule |
-|------|-----|------|
-| [`logo/bestrom-icon.jpg`](logo/bestrom-icon.jpg) | Org avatar, app mark | Mark on pure black |
-| [`banner/github-banner.jpg`](banner/github-banner.jpg) | GitHub / README hero | Mostly black field |
-| [`wallpaper/bestrom-amoled.jpg`](wallpaper/bestrom-amoled.jpg) | **Default** wallpaper | Near-total black |
+| File | Treatment |
+|------|-----------|
+| [`logo/bestrom-icon.jpg`](logo/bestrom-icon.jpg) | Dotted **B** on pure black |
+| [`banner/github-banner.jpg`](banner/github-banner.jpg) | Dotted mark / wordmark, vast black |
+| [`wallpaper/bestrom-amoled.jpg`](wallpaper/bestrom-amoled.jpg) | Whisper dots / faint B |
 
 ## Rules for new art
 
-1. **Primary field = `#000000`** — non-negotiable default  
-2. **Accents are sparks** — violet `#7C3AED` / cyan `#22D3EE` only in small areas  
-3. **No light theme art** as brand default  
-4. **No gray wallpaper washes** pretending to be dark  
-5. **No busy artwork walls** — empty black is a feature  
-6. Prefer flat / geometric marks over 3D glossy skins  
+1. Canvas = **`#000000` only** as default field  
+2. Letters in **logo / brand** = **dots**, not solid fills  
+3. Body UI text stays solid (readable) — dots are for **brand**  
+4. Accent dots: rare violet/cyan, never a rainbow grid  
+5. Inspired by Nothing minimalism — **do not** copy proprietary Nothing fonts/assets  
+6. Empty black margin > busy decoration  
 
 ## Copy bank
 
 | Use | Line |
 |-----|------|
-| Tagline | Android, refined. Battery first. Pure dark by default. |
-| One-liner | Pure dark by default. Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17. |
-| Pitch | A17 daily driver: pure black UI, best battery + real smoothness, AOSP-compliant. |
-| Anti-pitch | Not another skin. Not light chrome. Not placebo toggles. Not animation theater. |
+| Tagline | Android, refined. Battery first. Pure dark. Dotted quiet. |
+| One-liner | Ultra minimal. Pure dark. Dotted marks. More battery. Pure AOSP 17. |
+| Pitch | A17 daily driver: Nothing-level quiet, pure black battery UI, AOSP base. |
+| Anti-pitch | Not a heavy skin. Not a Nothing clone. Not light chrome. |
 
 ## Tokens
 
-See [`../design/tokens.css`](../design/tokens.css) and [`../design/DESIGN_SYSTEM.md`](../design/DESIGN_SYSTEM.md).
+[`../design/tokens.css`](../design/tokens.css) · [`../design/DESIGN_SYSTEM.md`](../design/DESIGN_SYSTEM.md)
