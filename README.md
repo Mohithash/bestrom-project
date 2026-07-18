@@ -96,10 +96,10 @@ Same taste as **Nothing OS**: ultra minimal, empty space, **grey dotted letters*
 
 > *Black. Grey dots. Ultra minimal. More battery. Still Android — pure AOSP 17.*
 
-**Full philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
-**Dot type:** [`design/DOT_TYPE.md`](design/DOT_TYPE.md)  
-**UI / UX:** [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · **Design system:** [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)  
-**Branding kit:** [`brand/README.md`](brand/README.md)
+**About:** [`docs/ABOUT.md`](docs/ABOUT.md) · **Philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
+**Press / social kit:** [`docs/PRESS_KIT.md`](docs/PRESS_KIT.md) · **Bios:** [`docs/SOCIAL_BIOS.md`](docs/SOCIAL_BIOS.md)  
+**Dot type:** [`design/DOT_TYPE.md`](design/DOT_TYPE.md) · **Branding:** [`brand/README.md`](brand/README.md)  
+**UI / UX:** [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · **Design system:** [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)
 
 ---
 
@@ -118,6 +118,9 @@ Same taste as **Nothing OS**: ultra minimal, empty space, **grey dotted letters*
 
 | Asset | Path |
 |-------|------|
+| **About (project)** | [`docs/ABOUT.md`](docs/ABOUT.md) |
+| **Press kit (PR / social)** | [`docs/PRESS_KIT.md`](docs/PRESS_KIT.md) |
+| **Social bios** | [`docs/SOCIAL_BIOS.md`](docs/SOCIAL_BIOS.md) |
 | **Philosophy** | [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) |
 | Branding kit index | [`brand/README.md`](brand/README.md) |
 | Design system | [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md) |
@@ -189,6 +192,18 @@ See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.m
 ## Downloads
 
 [sourceforge.net/projects/bestrom](https://sourceforge.net/projects/bestrom/) · folder `peridot/` when builds ship.
+
+## Community & visibility
+
+| | |
+|--|--|
+| **Issues** | Use GitHub Issues (templates in [`.github/`](.github/)) |
+| **Contributing** | [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md) |
+| **Security** | [`.github/SECURITY.md`](.github/SECURITY.md) |
+| **Press kit** | [`docs/PRESS_KIT.md`](docs/PRESS_KIT.md) — Reddit, X, XDA, Telegram copy |
+| **Share** | Always link this hub + monochrome logo/banner |
+
+**Topics:** `android` · `aosp` · `android-17` · `custom-rom` · `bestrom` · `peridot` · `poco-f6` · `battery`
 
 ## License
 
