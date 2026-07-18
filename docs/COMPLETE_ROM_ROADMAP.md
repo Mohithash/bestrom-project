@@ -2,6 +2,8 @@
 
 How to turn BestROM from **brand + scaffold** into a **complete custom ROM**, using the same *structure* as **VoltageOS**, the **pure AOSP** path (from nothing), and **Nothing-style product restraint**.
 
+**Product philosophy:** [PHILOSOPHY.md](PHILOSOPHY.md) — **battery first**, smoothness by restraint, AOSP-compliant daily driver. Not another cosmetic skin.
+
 ---
 
 ## What “complete” means

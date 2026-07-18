@@ -1,8 +1,9 @@
 # BestROM 17 — Feature vision
 
-**Product identity:** pure AOSP 17 + **battery-first dark UI/UX** (AMOLED pure black).
+**Philosophy:** [PHILOSOPHY.md](PHILOSOPHY.md)  
+**Battery is the most important feature.** Smoothness by restraint. Pure AOSP 17 daily driver.
 
-First ship is **bring-up**. Features below are the product roadmap after a bootable peridot build.
+First ship is **bring-up**. Features below ship after a bootable peridot build — and only if they pass the three questions: *battery · smoothness · AOSP*.
 
 ---
 
@@ -13,53 +14,51 @@ First ship is **bring-up**. Features below are the product roadmap after a boota
 - [ ] Flashable zip / fastboot images
 - [ ] SourceForge releases under `bestrom/peridot`
 
-## Phase 1 — Daily driver
+## Phase 1 — Daily driver (honest basics)
 
 - [ ] Stable RIL / data / VoLTE
 - [ ] Camera photo + video baseline
 - [ ] Fingerprint (UDFPS) + face if feasible
 - [ ] Audio, Bluetooth, Wi‑Fi as hardware allows
-- [ ] Battery charging & thermal sane defaults
+- [ ] Thermal & charging sane defaults
 
-## Phase 2 — Battery-first identity (design + UX)
+## Phase 2 — Identity without cosmetic tax
 
-Core story: **dark UI so the screen uses less power**.
+- [ ] Dark-only product theme (Settings / SystemUI / Setup)
+- [ ] Pure black wallpaper pack
+- [ ] Black-led boot animation (short, sparse)
+- [ ] QS / shade: black scrim, cyan active — no rainbow skins
+- [ ] SetupWizard: zero light full-bleed pages
+- [ ] `ro.bestrom.*` props + About branding
+- [ ] Specs: [BATTERY_UI.md](BATTERY_UI.md) · [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)
 
-- [ ] **Dark-only product theme** (Settings / SystemUI / Setup)
-- [ ] **Pure black** wallpaper pack + home empty space
-- [ ] Aurora boot animation (black-led, sparse violet/cyan)
-- [ ] QS / shade: black scrim, cyan active tiles
-- [ ] Settings monochrome on black + cyan switches
-- [ ] SetupWizard: no light pages
-- [ ] `ro.bestrom.*` props + About phone branding
-- [ ] Design system enforced: [DESIGN_SYSTEM.md](../design/DESIGN_SYSTEM.md)
-- [ ] UX spec: [BATTERY_UI.md](BATTERY_UI.md)
+## Phase 3 — Real battery craft (not placebo)
 
-## Phase 3 — Battery craft controls
+| Control | Why it ships |
+|---------|----------------|
+| Charge limit 80/85/90 | Longevity + less heat |
+| Refresh rate tile | 60 / auto / 120 with honest cost labels |
+| Power save UI mode | Kill blur, prefer 60 Hz, tighter timeouts |
+| AOD policy | Off default; optional black + dim clock |
+| Battery care page | Tips that match the dark product |
 
-| Control | Goal |
-|---------|------|
-| **Charge limit** 80/85/90 | Longevity + less heat |
-| **Refresh rate tile** | 60 / auto / 120 — thrift by default when possible |
-| **Power save UI mode** | Kill blur, prefer 60 Hz, tighter timeouts |
-| **AOD policy** | Off default; optional black + dim clock |
-| **Battery care page** | Signature BestROM surface with tips |
-
-## Phase 4 — Flavors (optional)
+## Phase 4 — Flavors (optional, still light)
 
 | Flavor | Contents |
 |--------|----------|
-| **Vanilla** | Pure AOSP + BestROM **dark brand** only |
-| **Plus** | Charge limit, RR tile, GameSpace light, AOD options |
-| **Privacy** | Hardened DNS, clipboard auto-clear — same dark shell |
+| **Vanilla** | Pure AOSP + BestROM dark brand only |
+| **Plus** | Charge limit, RR tile, light GameSpace |
+| **Privacy** | DNS / clipboard tools — same dark shell |
 
 ---
 
-## Design non-negotiables
+## Explicit non-goals
 
-1. **Primary canvas = `#000000`** (AMOLED pixels off)  
-2. **Accents are sparks** (violet/cyan), not full-screen floods  
-3. **Light theme is not a goal** for v1 product  
-4. **Battery UX + dark UI ship together** — not theme-only  
+- Heavy cosmetic skins competing with AOSP  
+- Animation packs / artwork walls as defaults  
+- Placebo “boosters” that don’t move battery or frames  
+- Equal investment in light + dark themes in v1  
 
-See main project README for architecture.
+---
+
+See hub README for architecture.

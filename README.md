@@ -5,7 +5,7 @@
 <h1 align="center">BestROM</h1>
 
 <p align="center">
-  <strong>Pure AOSP Android 17</strong> · <strong>battery-first dark</strong> · first light on <code>peridot</code>
+  <strong>Pure AOSP Android 17</strong> · battery first · smooth by restraint · <code>peridot</code>
 </p>
 
 <p align="center">
@@ -94,7 +94,9 @@ Not another ROM that pretends more chrome equals more quality.
 
 > *Less cosmetic tax. More battery. More smoothness. Still Android — pure AOSP 17.*
 
-Deep specs: [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)
+**Full philosophy:** [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md)  
+**UI / UX:** [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) · **Design system:** [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md)  
+**Branding kit:** [`brand/README.md`](brand/README.md)
 
 ---
 
@@ -112,11 +114,14 @@ Every default UI choice asks: *does this waste AMOLED power or compositor budget
 
 | Asset | Path |
 |-------|------|
+| **Philosophy** | [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) |
+| Branding kit index | [`brand/README.md`](brand/README.md) |
 | Design system | [`design/DESIGN_SYSTEM.md`](design/DESIGN_SYSTEM.md) |
 | CSS tokens | [`design/tokens.css`](design/tokens.css) |
-| Battery UI / UX spec | [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) |
+| Battery UI / UX | [`docs/BATTERY_UI.md`](docs/BATTERY_UI.md) |
 | Feature roadmap | [`docs/FEATURES.md`](docs/FEATURES.md) |
 | Complete ROM roadmap | [`docs/COMPLETE_ROM_ROADMAP.md`](docs/COMPLETE_ROM_ROADMAP.md) |
+| Landing page | [`docs/index.html`](docs/index.html) |
 | App icon | [`brand/logo/bestrom-icon.jpg`](brand/logo/bestrom-icon.jpg) |
 | GitHub banner | [`brand/banner/github-banner.jpg`](brand/banner/github-banner.jpg) |
 | AMOLED wallpaper | [`brand/wallpaper/bestrom-amoled.jpg`](brand/wallpaper/bestrom-amoled.jpg) |
