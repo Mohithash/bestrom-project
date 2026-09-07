@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Android-17-9CA3AF?style=for-the-badge&labelColor=000000" alt="Android 17" /></a>
-  <a href="https://github.com/Mohithash/bestrom_manifest/tree/17"><img src="https://img.shields.io/badge/Base-AOSP-D1D5DB?style=for-the-badge&labelColor=000000" alt="AOSP" /></a>
+  <a href="https://github.com/Mohithash/manifest/tree/17"><img src="https://img.shields.io/badge/Android-17-9CA3AF?style=for-the-badge&labelColor=000000" alt="Android 17" /></a>
+  <a href="https://github.com/Mohithash/manifest/tree/17"><img src="https://img.shields.io/badge/Base-AOSP-D1D5DB?style=for-the-badge&labelColor=000000" alt="AOSP" /></a>
   <a href="https://sourceforge.net/projects/bestrom/"><img src="https://img.shields.io/badge/Downloads-SourceForge-6B7280?style=for-the-badge&labelColor=000000" alt="SF" /></a>
   <img src="https://img.shields.io/badge/Device-peridot-9CA3AF?style=for-the-badge&labelColor=000000" alt="peridot" />
 </p>
@@ -153,39 +153,41 @@ AOSP android-17.0.0_r1
 | Repo | Branch | Role |
 |------|--------|------|
 | **[bestrom-project](https://github.com/Mohithash/bestrom-project)** (this) | `main` | Hub · design · docs |
-| [bestrom_manifest](https://github.com/Mohithash/bestrom_manifest) | `17` | Local manifests |
-| [android_vendor_bestrom](https://github.com/Mohithash/android_vendor_bestrom) | `17` | `vendor/bestrom` |
-| device / vendor / kernel forks | `17` | Bootstrap port |
+| [manifest](https://github.com/Mohithash/manifest) | `17` | `repo init` entry point: VoltageOS 17 plus the BestROM snippet |
+| [vendor_bestrom](https://github.com/Mohithash/vendor_bestrom) | `17` | `vendor/bestrom`: branding, overlays, `tools/mcp` |
+| [device_xiaomi_peridot](https://github.com/Mohithash/device_xiaomi_peridot) | `17` | POCO F6 device tree |
+| [vendor_xiaomi_peridot](https://github.com/Mohithash/vendor_xiaomi_peridot) | `17` | Proprietary blobs |
+| [kernel_xiaomi_sm8635](https://github.com/Mohithash/kernel_xiaomi_sm8635) | `17` | Theettam kernel |
+| [frameworks_base](https://github.com/Mohithash/frameworks_base), [packages_apps_Settings](https://github.com/Mohithash/packages_apps_Settings), [packages_apps_Freezer](https://github.com/Mohithash/packages_apps_Freezer) and the other `Mohithash/<path_with_underscores>` forks | `17` | BestROM changes on top of VoltageOS |
+| [bestrom_ota](https://github.com/Mohithash/bestrom_ota) | `17` | OTA catalog read by the Updater |
 
-## Build (when trees are ready)
+## Build
+
+One manifest, one branch. Needs the usual AOSP build host (Ubuntu, `repo`, ~400 GB free).
 
 ```bash
-mkdir ~/bestrom-a17 && cd ~/bestrom-a17
-
-repo init -u https://android.googlesource.com/platform/manifest \
-  -b android-17.0.0_r1 --git-lfs
-
-mkdir -p .repo/local_manifests
-curl -L -o .repo/local_manifests/bestrom.xml \
-  https://raw.githubusercontent.com/Mohithash/bestrom_manifest/17/snippets/local_manifest_peridot.xml
-
-repo sync -c -j$(nproc) --force-sync --no-clone-bundle
+mkdir ~/bestrom && cd ~/bestrom
+repo init -u https://github.com/Mohithash/manifest -b 17 --git-lfs
+repo sync -c -j$(nproc) --no-clone-bundle
 
 . build/envsetup.sh
-source vendor/bestrom/build/envsetup.sh
-bestrom_lunch peridot user
-m -j$(nproc)
+lunch bestrom_peridot-cp2a-user
+mka bestrom
 ```
 
-## Reality check
+The zip lands in `out/target/product/peridot/`. The tree also ships
+`AGENTS.md` and `.mcp.json` at its root, so an AI agent (Claude Code, Cursor,
+Codex) can sync, build, verify and test it through the BestROM MCP server in
+`vendor/bestrom/tools/mcp`.
 
-Peridot on **A17** is a **first-of-kind** effort. Trees on branch `17` start from working **16.2** sources and need HAL / sepolicy / kernel bring-up.
+## Status
 
-See [PORTING.md](https://github.com/Mohithash/bestrom_manifest/blob/17/PORTING.md).
+Peridot on Android 17 ships as official builds; see the release notes on
+SourceForge for what changed in each one.
 
 ## Downloads
 
-[sourceforge.net/projects/bestrom](https://sourceforge.net/projects/bestrom/) · folder `peridot/` when builds ship.
+[sourceforge.net/projects/bestrom](https://sourceforge.net/projects/bestrom/) · folder `peridot/`. The Updater app checks for new builds itself.
 
 ## Community & visibility
 
