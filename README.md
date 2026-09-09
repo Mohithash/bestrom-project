@@ -39,7 +39,7 @@ top of it.
 | Device | POCO F6 / Redmi Turbo 3 (`peridot`) first |
 | Status | WIP — trees & brand public; A17 bring-up ongoing |
 
-More: [About](docs/ABOUT.md) · [Philosophy](docs/PHILOSOPHY.md)
+More: [About](docs/ABOUT.md) · [Philosophy](docs/PHILOSOPHY.md) · [Credits](docs/CREDITS.md)
 
 ---
 
@@ -119,6 +119,7 @@ Same taste as **Nothing OS**: ultra minimal, empty space, **grey dotted letters*
 | Asset | Path |
 |-------|------|
 | **About (project)** | [`docs/ABOUT.md`](docs/ABOUT.md) |
+| **Credits (what this is built on)** | [`docs/CREDITS.md`](docs/CREDITS.md) |
 | **Press kit (PR / social)** | [`docs/PRESS_KIT.md`](docs/PRESS_KIT.md) |
 | **Social bios** | [`docs/SOCIAL_BIOS.md`](docs/SOCIAL_BIOS.md) |
 | **Philosophy** | [`docs/PHILOSOPHY.md`](docs/PHILOSOPHY.md) |
