@@ -23,7 +23,7 @@ The ROM itself is built from the [manifest](https://github.com/Mohithash/manifes
 
 | Device | Codename | Version | Build type | Latest build |
 |--------|----------|---------|------------|--------------|
-| POCO F6 / Redmi Turbo 3 | `peridot` | 3.0 (Android 17) | official | 2026-09-08 |
+| POCO F6 / Redmi Turbo 3 | `peridot` | 3.0 (Android 17) | official | 2026-09-09 |
 
 Builds are signed with project keys, not AOSP release keys, and ship without
 root. Release notes for each build are on
@@ -39,7 +39,7 @@ device finds new builds on its own.
 ```
 adb reboot recovery
 # Recovery -> Apply update -> Apply from ADB
-adb sideload BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip
+adb sideload BestROM-3.0-peridot-20260909-0059-OFFICIAL.zip
 ```
 
 Dirty flashing over an earlier BestROM build is supported. Coming from another
