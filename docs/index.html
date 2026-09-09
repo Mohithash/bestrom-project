@@ -170,9 +170,10 @@
 
     <h2 style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Individual images</h2>
     <section class="bestrom-card">
-      <p class="tag">Taken out of the released zip and checked against the hashes inside it, so they are byte for byte what that build flashes. <code>peridot</code> is an A/B device: there is no separate recovery partition, recovery lives inside <code>boot</code> and <code>vendor_boot</code>.</p>
+      <p class="tag">Taken out of the released zip and checked against the hashes inside it, so they are byte for byte what that build flashes. <code>peridot</code> is an A/B device and carries its own recovery partition on each slot, so <code>recovery.img</code> is a real image here rather than something folded into <code>boot</code>.</p>
       <ul class="whatsnew">
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/boot.img"><code>boot.img</code></a> — the kernel and, on this device, recovery · 96 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/boot.img"><code>boot.img</code></a> — the kernel · 96 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/recovery.img"><code>recovery.img</code></a> — the recovery this ROM builds, with its own dot-matrix screen · 100 MB</li>
       <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vendor_boot.img"><code>vendor_boot.img</code></a> — vendor ramdisk and the recovery bits that live with it · 96 MB</li>
       <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/dtbo.img"><code>dtbo.img</code></a> — device tree overlays · 24 MB</li>
       <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/init_boot.img"><code>init_boot.img</code></a> — the generic ramdisk · 8 MB</li>
