@@ -168,6 +168,20 @@
   </ul>
     </section>
 
+    <h2 style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Individual images</h2>
+    <section class="bestrom-card">
+      <p class="tag">Taken out of the released zip and checked against the hashes inside it, so they are byte for byte what that build flashes. <code>peridot</code> is an A/B device: there is no separate recovery partition, recovery lives inside <code>boot</code> and <code>vendor_boot</code>.</p>
+      <ul class="whatsnew">
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/boot.img"><code>boot.img</code></a> — the kernel and, on this device, recovery · 96 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vendor_boot.img"><code>vendor_boot.img</code></a> — vendor ramdisk and the recovery bits that live with it · 96 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/dtbo.img"><code>dtbo.img</code></a> — device tree overlays · 24 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/init_boot.img"><code>init_boot.img</code></a> — the generic ramdisk · 8 MB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta.img"><code>vbmeta.img</code></a> — verified boot metadata · 8 KB</li>
+      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta_system.img"><code>vbmeta_system.img</code></a> — verified boot metadata for the system chain · 4 KB</li>
+      </ul>
+      <p class="tag"><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/SHA256SUMS.txt">SHA256SUMS.txt</a> · flash with <code>fastboot flash boot boot.img</code> and so on. The system, vendor and product partitions are not here — those come from the zip, over recovery sideload.</p>
+    </section>
+
     <h2 style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Built on other people's work</h2>
     <section class="bestrom-card">
       <p class="tag">VoltageOS 6.1, LineageOS and AOSP underneath. Cromite for the WebView, LeanType for the keyboard, a native port of EdgeX for the edge gestures, MiXplorer and Via preloaded unmodified, Doto and Space Grotesk under the Open Font License. Full list, with licences and links: <a href="https://github.com/Mohithash/bestrom-project/blob/main/docs/CREDITS.md">Credits</a>.</p>
