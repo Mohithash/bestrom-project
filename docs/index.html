@@ -69,6 +69,9 @@
       margin-top: 3rem; text-align: center; color: #6b7280; font-size: 0.85rem;
     }
     code { color: #9ca3af; font-family: var(--br-mono); font-size: 0.9em; }
+    ul.whatsnew { margin: 0; padding-left: 1.1rem; color: #9ca3af; line-height: 1.6; }
+    ul.whatsnew li { margin: 0.55rem 0; }
+    ul.whatsnew b { color: #d1d5db; font-weight: 600; }
   </style>
 </head>
 <body class="bestrom-dark">
@@ -138,16 +141,31 @@
 
     <h2 id="release" style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Latest release</h2>
     <div class="grid">
-      <a class="bestrom-card card" href="https://sourceforge.net/projects/bestrom/files/peridot/BestROM-3.0-peridot-20260907-1010-OFFICIAL.zip/download">
-        <strong class="bestrom-accent">3.0 &middot; 2026-09-06 &middot; OFFICIAL</strong>
-        <p class="tag">POCO F6 / Redmi Turbo 3 (peridot) &middot; Android 17 &middot; 2.77 GB</p>
-        <p class="tag" style="font-size:0.8rem;word-break:break-all">sha256 4b001566c0eed43943dc8e38cf2d633517e7d9e8b519c0ff8cb4ab51d819f27c</p>
+      <a class="bestrom-card card" href="https://downloads.sourceforge.net/project/bestrom/peridot/BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip">
+        <strong class="bestrom-accent">3.0 &middot; 2026-09-08 &middot; OFFICIAL</strong>
+        <p class="tag">POCO F6 / Redmi Turbo 3 (peridot) &middot; Android 17 &middot; 2.83 GB</p>
+        <p class="tag" style="font-size:0.8rem;word-break:break-all">BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip</p>
+        <p class="tag" style="font-size:0.8rem;word-break:break-all">sha256 5ccc8bfd09b9a0931745e88e8d789500c07cf9ee7bf658c92a041e7eb157ec5e</p>
       </a>
       <a class="bestrom-card card" href="https://raw.githubusercontent.com/Mohithash/bestrom_ota/17/changelog_peridot.txt">
         <strong class="bestrom-accent">Changelog</strong>
         <p class="tag">Release notes, kernel-style</p>
       </a>
     </div>
+
+    <h2 id="whatsnew" style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">New in this build</h2>
+    <section class="bestrom-card">
+  <ul class="whatsnew">
+    <li><b>Agent mode</b> — the phone can carry out a task you type, on its own: it reads the screen, decides the next step and does it until the task is done or you stop it. Off by default. You supply your own model endpoint and key, so BestROM runs no endpoint and receives nothing, and what a task sees on the screen goes to the endpoint you named while the task runs. It asks before anything that changes something, refuses lock screen, bootloader, developer, accessibility and payment actions whatever you allow, and turns itself off when the phone restarts.</li>
+    <li><b>Cromite WebView</b> — the engine every app uses to show a web page is Cromite's build instead of the AOSP Chromium prebuilt, built from BestROM's own fork of Cromite so that a page can no longer crash the app showing it. No variations, metrics or component-update endpoints; the costs are no certificate-revocation updates between releases and a build four Chrome majors behind the one it replaces.</li>
+    <li><b>LeanType keyboard</b> — replaces the AOSP keyboard, opens at full size and brings its own spell checker. It is signed with the ROM key, so it updates by OTA only.</li>
+    <li><b>Monochrome Settings</b> — a true-black system theme with dot-matrix type on the lock screen, every Settings row its own card with an outlined letter glyph, and no window blur anywhere. Pure black dark theme is on out of the box.</li>
+    <li><b>Edge gestures</b> — swipe gestures along the screen edges, hardware key remapping, a pie menu, side panels and clipboard history, preloaded as its own app. Nothing happens until you assign a gesture.</li>
+    <li><b>Ad and tracker blocking</b> — a DNS-level blocker for ads, trackers and malware is part of the ROM and on out of the box. It works inside the system resolver, so it needs no root and does not take the VPN slot. An optional deep mode, off by default, covers apps that go around the resolver.</li>
+    <li><b>Camera</b> — MiuiCamera is the camera again, and photos taken with it now appear in the gallery.</li>
+    <li><b>Files</b> — MiXplorer is preloaded alongside Via as a normal, removable app.</li>
+  </ul>
+    </section>
 
     <footer>
       BestROM · black · grey dots · <code>peridot</code>
