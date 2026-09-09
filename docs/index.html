@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="BestROM — Android 17 on VoltageOS 6.1. Black and grey dots only. Battery first." />
-  <title>BestROM — black · grey dots · Android 17</title>
+  <meta name="description" content="BestROM is an Android 17 build for the POCO F6 / Redmi Turbo 3 (peridot), based on VoltageOS 6.1." />
+  <title>BestROM — Android 17 for peridot (POCO F6)</title>
   <link rel="stylesheet" href="../design/tokens.css" />
   <style>
     * { box-sizing: border-box; }
@@ -72,6 +72,16 @@
     ul.whatsnew { margin: 0; padding-left: 1.1rem; color: #9ca3af; line-height: 1.6; }
     ul.whatsnew li { margin: 0.55rem 0; }
     ul.whatsnew b { color: #d1d5db; font-weight: 600; }
+    h2.sec { margin: 2.5rem 0 0.75rem; font-size: 0.82rem; letter-spacing: 0.24em;
+             text-transform: uppercase; color: #6b7280; font-weight: 600; }
+    .spec { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.5rem; margin-top: 0.5rem; }
+    .spec div { border-bottom: 1px solid #1a1a1a; padding: 0.5rem 0; color: #9ca3af; font-size: 0.92rem; }
+    .spec b { color: #d1d5db; font-weight: 600; }
+    td.mono { font-family: var(--br-mono); font-size: 0.8rem; }
+    td.hash { font-family: var(--br-mono); font-size: 0.66rem; color: #6b7280; word-break: break-all; }
+    pre { background: #0b0b0b; border: 1px solid #1a1a1a; border-radius: 10px;
+          padding: 0.9rem 1rem; overflow: auto; font-size: 0.82rem; color: #cfcfcf; }
+    @media (max-width: 560px) { .spec { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body class="bestrom-dark">
@@ -79,117 +89,136 @@
     <header class="hero">
       <img class="logo" src="../brand/logo/bestrom-icon.jpg" alt="BestROM" />
       <h1>BestROM</h1>
-      <p class="tag">Android 17 on VoltageOS 6.1 · black + grey dots only · battery first</p>
+      <p class="tag">Android 17 for the POCO F6 / Redmi Turbo 3 (<code>peridot</code>)</p>
       <img class="banner" src="../brand/banner/github-banner.jpg" alt="BestROM banner" />
     </header>
 
-    <section class="bestrom-card philosophy">
-      <p><strong>Black. Grey dots. Nothing else.</strong></p>
-      <p>
-        Like <strong>Nothing OS</strong>: ultra minimal, empty space, dotted letter craft.
-        Brand colors are only <strong>pure black</strong> and <strong>greys</strong> —
-        no violet, no cyan, no rainbow skins.
-      </p>
-      <p>
-        Base is <strong>VoltageOS 6.1</strong>, itself built on LineageOS and AOSP 17. Goal is battery + real smoothness, not cosmetic tax.
-      </p>
-      <p class="bestrom-dot-mark" style="margin-top:1.25rem">BestROM</p>
+    <p class="tag">BestROM is a product layer on top of
+    <a href="https://github.com/VoltageOS" style="color:#d1d5db">VoltageOS</a> 6.1, which is itself built on
+    LineageOS and AOSP. The priority is battery life and a plain dark interface, not skins or feature count.
+    Every fork under this account keeps its upstream history, authors and notices.</p>
+
+    <h2 class="sec" id="release">Download</h2>
+    <section class="bestrom-card">
+      <p style="margin:0 0 0.4rem;color:#d1d5db;font-weight:600">BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip</p>
+      <p class="tag" style="font-size:0.9rem;margin:0">3.0 &middot; 2026-09-08 &middot; official &middot; 2.83&nbsp;GB</p>
+      <p class="tag" style="font-size:0.78rem;word-break:break-all;margin:0.5rem 0 0.9rem">sha256 5ccc8bfd09b9a0931745e88e8d789500c07cf9ee7bf658c92a041e7eb157ec5e</p>
+      <p style="margin:0"><a href="https://downloads.sourceforge.net/project/bestrom/peridot/BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip" style="color:#d1d5db;font-weight:600">Download</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://raw.githubusercontent.com/Mohithash/bestrom_ota/17/changelog_peridot.txt" style="color:#9ca3af">Release notes</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://sourceforge.net/projects/bestrom/files/peridot/" style="color:#9ca3af">All files</a></p>
+    </section>
+    <p class="tag" style="font-size:0.9rem">Verify the checksum before flashing. The Updater app on the device
+    finds new builds on its own.</p>
+
+    <h2 class="sec">Build information</h2>
+    <div class="spec">
+      <div><b>Version</b> — 3.0</div>
+      <div><b>Build date</b> — 2026-09-08</div>
+      <div><b>Build type</b> — official, user</div>
+      <div><b>Android</b> — 17 (API 37), <code>CP2A.260605.016</code></div>
+      <div><b>Base</b> — VoltageOS 6.1, LineageOS, AOSP</div>
+      <div><b>Kernel</b> — Linux 6.1.176, GKI <code>android14-6.1</code></div>
+      <div><b>Security patch</b> — 2026-08-01</div>
+      <div><b>Vendor blobs</b> — OS3.0.302.0.WNPMIXM</div>
+      <div><b>Signing keys</b> — project keys, not release keys</div>
+      <div><b>Root</b> — not included</div>
+    </div>
+
+    <h2 class="sec">Device</h2>
+    <div class="spec">
+      <div><b>Model</b> — POCO F6 / Redmi Turbo 3</div>
+      <div><b>Codename</b> — peridot</div>
+      <div><b>SoC</b> — Snapdragon 8s Gen 3 (SM8635)</div>
+      <div><b>Architecture</b> — arm64, Cortex-A76</div>
+      <div><b>Display</b> — 1220 &times; 2712, 480 dpi</div>
+      <div><b>Partition layout</b> — A/B, dynamic partitions</div>
+    </div>
+
+    <h2 class="sec">Changelog</h2>
+    <section class="bestrom-card">
+      <ul class="whatsnew">
+        <li><b>Agent mode</b> — the device can carry out a typed task on its own. Off by default, disabled again on reboot. You supply the model endpoint and key; no endpoint is run by this project. It prompts before any action that changes state, and refuses lock screen, bootloader, developer, accessibility and payment actions.</li>
+        <li><b>WebView</b> — replaced the AOSP Chromium prebuilt with Cromite 148.0.7778.168, built from a fork that disables the self-check that crashed host apps. No variations, metrics or component-updater endpoints. It receives no certificate-revocation updates between releases and trails the prebuilt by four Chrome majors.</li>
+        <li><b>Keyboard</b> — replaced the AOSP keyboard with LeanType 4.2.0, defaulting to full height and width, with its own spell checker. Signed with the ROM key, so it updates by OTA only.</li>
+        <li><b>DNS blocking</b> — ad, tracker and malware blocking in the system resolver, enabled by default. No root, no VPN slot. An optional deep mode covers apps that bypass the resolver.</li>
+        <li><b>Edge gestures</b> — edge swipes, key remapping, pie menu, side panels and clipboard history, as a separate app. Inactive until a gesture is assigned.</li>
+        <li><b>Theme</b> — monochrome, true black by default, with dot-matrix type on the lock screen and no window blur. Settings redrawn as individual rows.</li>
+        <li><b>Camera</b> — switched back to MiuiCamera. Fixed captures not appearing in the gallery.</li>
+        <li><b>Files</b> — preloaded MiXplorer as a removable user app.</li>
+        <li><b>Branding</b> — removed the remaining VoltageOS marks from the Updater, status bar and About phone.</li>
+      </ul>
     </section>
 
-    <section class="bestrom-card" style="margin-top:1rem">
-      <h2 style="margin-top:0;font-size:1.15rem;color:#d1d5db">Allowed palette</h2>
-      <div class="swatches">
-        <div class="swatch" style="background:#000000" title="black"></div>
-        <div class="swatch" style="background:#1a1a1a" title="line"></div>
-        <div class="swatch" style="background:#6b7280" title="dot dim"></div>
-        <div class="swatch" style="background:#9ca3af" title="dot"></div>
-        <div class="swatch" style="background:#d1d5db" title="dot bright"></div>
-      </div>
-      <p class="tag" style="margin-top:0.75rem">That is the full brand color system.</p>
-    </section>
+    <h2 class="sec">Installation</h2>
+    <p class="tag" style="font-size:0.92rem">Dirty flashing over an earlier BestROM build is supported. Coming from
+    another ROM, wipe data first.</p>
+<pre>adb reboot recovery
+# Recovery -&gt; Apply update -&gt; Apply from ADB
+adb sideload BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip</pre>
+    <p class="tag" style="font-size:0.9rem">The zip installs to the inactive slot and activates it. The first boot
+    takes several minutes while apps are compiled.</p>
 
+    <h2 class="sec">Partition images</h2>
+    <p class="tag" style="font-size:0.92rem">Extracted from the release zip and checked against the hashes it
+    carries, so these are the same bytes that build flashes. <code>peridot</code> has a recovery partition on each
+    slot, so <code>recovery.img</code> is a real image rather than part of <code>boot</code>. The system, vendor and
+    product partitions are not here; they come from the zip.</p>
+    <table>
+      <thead><tr><th>Image</th><th>Size</th><th>SHA-256</th><th></th></tr></thead>
+      <tbody>
+        <tr><td class="mono">boot.img</td><td>96 MB</td><td class="hash">b2f0a29eb19aefd9b7e968d805196f6eb43cb36485ac57a2823ed195b2b5a474</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/boot.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">recovery.img</td><td>100 MB</td><td class="hash">01b673d8d2ed93a52ac78255a801a5c831c2177d935f8463112584e6cab1466b</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/recovery.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">vendor_boot.img</td><td>96 MB</td><td class="hash">2d8fa28a8abfaf71091a869b73f91350176cb6fdd048b683d05f6c5f52ebb8e7</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vendor_boot.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">dtbo.img</td><td>24 MB</td><td class="hash">e4058456b1c7bc59966926c95954d5f67142fc5c057121423525fddb2429ef1e</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/dtbo.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">init_boot.img</td><td>8 MB</td><td class="hash">7802381ffabb3b380fc7025b11b43f9da5e4b1ba89c9c66253702d1e090bfd8d</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/init_boot.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">vbmeta.img</td><td>8 KB</td><td class="hash">a9f2fa22cf75d4ed611549abf63eebcef1ea451572c05ff7e3d3dce2687061a3</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta.img" style="color:#9ca3af">get</a></td></tr>
+        <tr><td class="mono">vbmeta_system.img</td><td>4 KB</td><td class="hash">ae2c2b2150a78780be49846a0222972e49e0fe73e2082639dde2d750ff306d93</td><td><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta_system.img" style="color:#9ca3af">get</a></td></tr>
+      </tbody>
+    </table>
+    <p class="tag" style="font-size:0.88rem"><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/SHA256SUMS.txt" style="color:#9ca3af">SHA256SUMS.txt</a>
+    &middot; flash with <code>fastboot flash boot boot.img</code> and so on.</p>
+
+    <h2 class="sec">Source code</h2>
+<pre>repo init -u https://github.com/Mohithash/manifest -b 17 --git-lfs
+repo sync -c -j$(nproc) --no-clone-bundle
+. build/envsetup.sh
+lunch bestrom_peridot-cp2a-user
+mka bestrom</pre>
+    <p class="tag" style="font-size:0.92rem">The tree ships <code>AGENTS.md</code> and <code>.mcp.json</code> at its
+    root, so a coding agent can sync, build, verify and test it through the MCP server in
+    <code>vendor/bestrom/tools/mcp</code>.</p>
+
+    <h2 class="sec">Credits</h2>
+    <p class="tag" style="font-size:0.92rem">Built on VoltageOS 6.1, LineageOS and AOSP. Ships Cromite for the
+    WebView, LeanType for the keyboard, a native port of EdgeX for the edge gestures, and MiXplorer and Via
+    unmodified. Doto and Space Grotesk are used under the SIL Open Font License. The full list, with licences, is in
+    <a href="CREDITS.md" style="color:#d1d5db">CREDITS</a>.</p>
+
+    <h2 class="sec">Project documents</h2>
     <div class="grid">
+      <a class="bestrom-card card" href="ABOUT.md">
+        <strong class="bestrom-accent">About</strong>
+        <p class="tag">What this project is</p>
+      </a>
       <a class="bestrom-card card" href="PHILOSOPHY.md">
         <strong class="bestrom-accent">Philosophy</strong>
-        <p class="tag">Battery · monochrome · AOSP</p>
-      </a>
-      <a class="bestrom-card card" href="../design/DOT_TYPE.md">
-        <strong class="bestrom-accent">Dot type</strong>
-        <p class="tag">Grey dotted letters</p>
+        <p class="tag">Battery, monochrome, AOSP</p>
       </a>
       <a class="bestrom-card card" href="../design/DESIGN_SYSTEM.md">
         <strong class="bestrom-accent">Design system</strong>
-        <p class="tag">Black + greys only</p>
+        <p class="tag">Black and grey only</p>
       </a>
       <a class="bestrom-card card" href="../brand/README.md">
         <strong class="bestrom-accent">Branding kit</strong>
-        <p class="tag">Logo · banner · wallpaper</p>
-      </a>
-      <a class="bestrom-card card" href="BATTERY_UI.md">
-        <strong class="bestrom-accent">Battery UI</strong>
-        <p class="tag">Dark defaults</p>
-      </a>
-      <a class="bestrom-card card" href="https://sourceforge.net/projects/bestrom/">
-        <strong class="bestrom-accent">Downloads</strong>
-        <p class="tag">SourceForge</p>
-      </a>
-      <a class="bestrom-card card" href="https://github.com/Mohithash/manifest">
-        <strong class="bestrom-accent">Source</strong>
-        <p class="tag" style="font-family:ui-monospace,monospace;font-size:0.78rem">repo init -u https://github.com/Mohithash/manifest -b 17</p>
+        <p class="tag">Logo, banner, wallpaper</p>
       </a>
     </div>
-
-    <h2 id="release" style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Latest release</h2>
-    <div class="grid">
-      <a class="bestrom-card card" href="https://downloads.sourceforge.net/project/bestrom/peridot/BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip">
-        <strong class="bestrom-accent">3.0 &middot; 2026-09-08 &middot; OFFICIAL</strong>
-        <p class="tag">POCO F6 / Redmi Turbo 3 (peridot) &middot; Android 17 &middot; 2.83 GB</p>
-        <p class="tag" style="font-size:0.8rem;word-break:break-all">BestROM-3.0-peridot-20260908-2346-OFFICIAL.zip</p>
-        <p class="tag" style="font-size:0.8rem;word-break:break-all">sha256 5ccc8bfd09b9a0931745e88e8d789500c07cf9ee7bf658c92a041e7eb157ec5e</p>
-      </a>
-      <a class="bestrom-card card" href="https://raw.githubusercontent.com/Mohithash/bestrom_ota/17/changelog_peridot.txt">
-        <strong class="bestrom-accent">Changelog</strong>
-        <p class="tag">Release notes, kernel-style</p>
-      </a>
-    </div>
-
-    <h2 id="whatsnew" style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">New in this build</h2>
-    <section class="bestrom-card">
-  <ul class="whatsnew">
-    <li><b>Agent mode</b> — the phone can carry out a task you type, on its own: it reads the screen, decides the next step and does it until the task is done or you stop it. Off by default. You supply your own model endpoint and key, so BestROM runs no endpoint and receives nothing, and what a task sees on the screen goes to the endpoint you named while the task runs. It asks before anything that changes something, refuses lock screen, bootloader, developer, accessibility and payment actions whatever you allow, and turns itself off when the phone restarts.</li>
-    <li><b>Cromite WebView</b> — the engine every app uses to show a web page is Cromite's build instead of the AOSP Chromium prebuilt, built from BestROM's own fork of Cromite so that a page can no longer crash the app showing it. No variations, metrics or component-update endpoints; the costs are no certificate-revocation updates between releases and a build four Chrome majors behind the one it replaces.</li>
-    <li><b>LeanType keyboard</b> — replaces the AOSP keyboard, opens at full size and brings its own spell checker. It is signed with the ROM key, so it updates by OTA only.</li>
-    <li><b>Monochrome Settings</b> — a true-black system theme with dot-matrix type on the lock screen, every Settings row its own card with an outlined letter glyph, and no window blur anywhere. Pure black dark theme is on out of the box.</li>
-    <li><b>Edge gestures</b> — swipe gestures along the screen edges, hardware key remapping, a pie menu, side panels and clipboard history, preloaded as its own app. Nothing happens until you assign a gesture.</li>
-    <li><b>No root</b> — the image ships without KernelSU, SukiSU or a root manager, and <code>su</code> is not present. Rooting it afterwards is your own business.</li>
-    <li><b>Ad and tracker blocking</b> — a DNS-level blocker for ads, trackers and malware is part of the ROM and on out of the box. It works inside the system resolver, so it needs no root and does not take the VPN slot. An optional deep mode, off by default, covers apps that go around the resolver.</li>
-    <li><b>Camera</b> — MiuiCamera is the camera again, and photos taken with it now appear in the gallery.</li>
-    <li><b>Files</b> — MiXplorer is preloaded alongside Via as a normal, removable app.</li>
-  </ul>
-    </section>
-
-    <h2 style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Individual images</h2>
-    <section class="bestrom-card">
-      <p class="tag">Taken out of the released zip and checked against the hashes inside it, so they are byte for byte what that build flashes. <code>peridot</code> is an A/B device and carries its own recovery partition on each slot, so <code>recovery.img</code> is a real image here rather than something folded into <code>boot</code>.</p>
-      <ul class="whatsnew">
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/boot.img"><code>boot.img</code></a> — the kernel · 96 MB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/recovery.img"><code>recovery.img</code></a> — the recovery this ROM builds, with its own dot-matrix screen · 100 MB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vendor_boot.img"><code>vendor_boot.img</code></a> — vendor ramdisk and the recovery bits that live with it · 96 MB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/dtbo.img"><code>dtbo.img</code></a> — device tree overlays · 24 MB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/init_boot.img"><code>init_boot.img</code></a> — the generic ramdisk · 8 MB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta.img"><code>vbmeta.img</code></a> — verified boot metadata · 8 KB</li>
-      <li><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/vbmeta_system.img"><code>vbmeta_system.img</code></a> — verified boot metadata for the system chain · 4 KB</li>
-      </ul>
-      <p class="tag"><a href="https://downloads.sourceforge.net/project/bestrom/peridot/images-20260908-2346/SHA256SUMS.txt">SHA256SUMS.txt</a> · flash with <code>fastboot flash boot boot.img</code> and so on. The system, vendor and product partitions are not here — those come from the zip, over recovery sideload.</p>
-    </section>
-
-    <h2 style="margin-top:2.5rem;font-size:1.15rem;color:#d1d5db">Built on other people's work</h2>
-    <section class="bestrom-card">
-      <p class="tag">VoltageOS 6.1, LineageOS and AOSP underneath. Cromite for the WebView, LeanType for the keyboard, a native port of EdgeX for the edge gestures, MiXplorer and Via preloaded unmodified, Doto and Space Grotesk under the Open Font License. Full list, with licences and links: <a href="https://github.com/Mohithash/bestrom-project/blob/main/docs/CREDITS.md">Credits</a>.</p>
-    </section>
 
     <footer>
-      BestROM · black · grey dots · <code>peridot</code>
+      BestROM &middot; Android 17 &middot; <code>peridot</code><br />
+      A hobby project. Not affiliated with Google, Xiaomi, POCO, LineageOS or VoltageOS.
     </footer>
   </div>
 </body>

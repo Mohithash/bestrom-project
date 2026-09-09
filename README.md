@@ -37,7 +37,7 @@ top of it.
 | Focus | Battery · smooth daily use |
 | UI | Black background · grey accents/dots only |
 | Device | POCO F6 / Redmi Turbo 3 (`peridot`) first |
-| Status | WIP — trees & brand public; A17 bring-up ongoing |
+| Status | Official — latest build 3.0, 2026-09-08 |
 
 More: [About](docs/ABOUT.md) · [Philosophy](docs/PHILOSOPHY.md) · [Credits](docs/CREDITS.md)
 
@@ -190,8 +190,14 @@ Codex) can sync, build, verify and test it through the BestROM MCP server in
 
 ## Status
 
-Peridot on Android 17 ships as official builds; see the release notes on
-SourceForge for what changed in each one.
+| Device | Codename | Version | Build type | Latest build |
+|--------|----------|---------|------------|--------------|
+| POCO F6 / Redmi Turbo 3 | `peridot` | 3.0 (Android 17) | official | 2026-09-08 |
+
+Builds are signed with project keys, not AOSP release keys, and ship without
+root. Release notes for each build are on
+[SourceForge](https://sourceforge.net/projects/bestrom/files/peridot/) and in
+the [OTA changelog](https://raw.githubusercontent.com/Mohithash/bestrom_ota/17/changelog_peridot.txt).
 
 ## Downloads
 
