@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/Mohithash/manifest/tree/17"><img src="https://img.shields.io/badge/Android-17-9CA3AF?style=for-the-badge&labelColor=000000" alt="Android 17" /></a>
-  <a href="https://github.com/Mohithash/manifest/tree/17"><img src="https://img.shields.io/badge/Base-AOSP-D1D5DB?style=for-the-badge&labelColor=000000" alt="AOSP" /></a>
+  <a href="https://github.com/Mohithash/manifest/tree/17"><img src="https://img.shields.io/badge/Base-VoltageOS%206.1-D1D5DB?style=for-the-badge&labelColor=000000" alt="VoltageOS 6.1" /></a>
   <a href="https://sourceforge.net/projects/bestrom/"><img src="https://img.shields.io/badge/Downloads-SourceForge-6B7280?style=for-the-badge&labelColor=000000" alt="SF" /></a>
   <img src="https://img.shields.io/badge/Device-peridot-9CA3AF?style=for-the-badge&labelColor=000000" alt="peridot" />
 </p>
@@ -23,11 +23,17 @@
 
 ## What is BestROM?
 
-Hobby **pure AOSP Android 17** ROM. Priority is **battery** and a small, dark UI — not skins or feature bloat.
+Hobby **Android 17** ROM for the POCO F6. Priority is **battery** and a small,
+dark UI — not skins or feature bloat.
+
+BestROM is a product layer on top of [VoltageOS](https://github.com/VoltageOS)
+6.1, which is itself built on LineageOS and AOSP. The forks under this account
+carry the full upstream history, authors and notices; BestROM commits sit on
+top of it.
 
 | | |
 |--|--|
-| Android | 17 · AOSP |
+| Android | 17 · AOSP via VoltageOS 6.1 |
 | Focus | Battery · smooth daily use |
 | UI | Black background · grey accents/dots only |
 | Device | POCO F6 / Redmi Turbo 3 (`peridot`) first |
@@ -140,12 +146,13 @@ Same taste as **Nothing OS**: ultra minimal, empty space, **grey dotted letters*
 
 ```
 AOSP android-17.0.0_r1
- ├── vendor/bestrom              ← brand, props, overlays (this project’s sister repo)
- ├── device/xiaomi/peridot @ 17   ← port from 16.2 (bring-up)
- ├── vendor/xiaomi/peridot @ 17
- └── kernel/xiaomi/sm8635* @ 17
-         ↓
-   BestROM for peridot
+ └── VoltageOS 6.1              ← base product config, apps and overlays
+      ├── vendor/bestrom              ← brand, props, overlays (this project’s sister repo)
+      ├── device/xiaomi/peridot @ 17   ← port from 16.2 (bring-up)
+      ├── vendor/xiaomi/peridot @ 17
+      └── kernel/xiaomi/sm8635* @ 17
+                ↓
+          BestROM for peridot
 ```
 
 ## Repositories
