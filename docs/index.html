@@ -114,6 +114,22 @@
     <p class="tag" style="font-size:0.9rem">Verify the checksum before flashing. The Updater app on the device
     finds new builds on its own.</p>
 
+    <h2 class="sec" id="root">Root</h2>
+    <p class="tag" style="font-size:0.92rem">Not included in the ROM zip. If you want root, the recommended kernel is
+    <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635" style="color:#d1d5db">Theettam</a> 2.8, GKI 6.1.176,
+    built for <code>peridot</code>. Flash one flavor in recovery after the ROM. Back up <code>boot</code> and
+    <code>vendor_boot</code> first, and do not flash a boot image by itself.</p>
+    <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.9rem 0 0">
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-KSUN3.3.0-SUSFS2.3.0-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">KernelSU-Next + SUSFS</a>
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-KSUN3.3.0-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">KernelSU-Next</a>
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-SukiSU-Ultra-SUSFS2.3.0-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">SukiSU-Ultra + SUSFS</a>
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-ReSukiSU-SUSFS2.3.0-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ReSukiSU + SUSFS</a>
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-KSUN3.3.0-SUSFS2.3.0-DroidSpaces-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">KernelSU-Next + DroidSpaces</a>
+      <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/download/v2.8/Theettam-2.8-Premium-SukiSU-SUSFS-DroidSpaces-peridot-6.1.176-android14-11-ga3b9c44908dd-ab13320413.zip" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">Premium SukiSU + DroidSpaces</a>
+    </p>
+    <p class="tag" style="font-size:0.9rem">Start with KernelSU-Next + SUSFS. The DroidSpaces flavors are experimental.
+    <a href="https://github.com/Mohithash/kernel_xiaomi_sm8635/releases/tag/v2.8" style="color:#9ca3af">Release notes</a></p>
+
     <h2 class="sec">Build information</h2>
     <div class="spec">
       <div><b>Version</b> — 3.0</div>
@@ -125,7 +141,7 @@
       <div><b>Security patch</b> — 2026-09-01</div>
       <div><b>Vendor blobs</b> — OS3.0.302.0.WNPMIXM</div>
       <div><b>Signing keys</b> — project keys, not release keys</div>
-      <div><b>Root</b> — not included</div>
+      <div><b>Root</b> — not included. <a href="#root" style="color:#d1d5db">Theettam 2.8</a> if you want it</div>
     </div>
 
     <h2 class="sec">Device</h2>
