@@ -42,4 +42,10 @@ Be respectful. No harassment. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
 
-BestROM original contributions: **Apache-2.0** unless stated. Keep upstream licenses for AOSP/device/kernel code.
+BestROM is free and open source. You may modify it and distribute a build
+under your own name. Original contributions are **Apache-2.0** unless stated.
+Keep the notices, and keep upstream licences for AOSP, device, kernel and
+shipped components. GPL parts need their source. MiXplorer, Via and the
+Xiaomi camera blobs are not relicensed here.
+
+Send the change as a pull request.
