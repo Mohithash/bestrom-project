@@ -7,6 +7,8 @@
   <title>BestROM — Android 17 for peridot (POCO F6)</title>
   <link rel="stylesheet" href="../design/tokens.css" />
   <style>
+    html { scroll-behavior: smooth; }
+    #mcp { scroll-margin-top: 24px; }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -124,8 +126,10 @@
       <a href="https://t.me/theettamsu" style="color:#9ca3af" rel="noopener noreferrer">Support</a></p>
       <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.85rem 0 0">
         <a href="https://github.com/Mohithash/bestrom-project" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">Star my repo</a>
-        <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=bestrom&amp;config=eyJjb21tYW5kIjoidXYiLCJhcmdzIjpbInJ1biIsIi0tZGlyZWN0b3J5IiwiJHt3b3Jrc3BhY2VGb2xkZXJ9L3ZlbmRvci9iZXN0cm9tL3Rvb2xzL21jcCIsImJlc3Ryb20tbWNwIiwiLS10cmFuc3BvcnQiLCJzdGRpbyJdfQ==" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none">MCP</a>
+        <a href="#mcp" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none">MCP</a>
       </p>
+      <p class="tag" style="font-size:0.78rem;margin:0.7rem 0 0">This work is free. Nothing is asked, unless you are a billionaire.
+      <a href="https://buymeacoffee.com/salg" style="color:#9ca3af;border:1px solid #333;border-radius:8px;padding:0.25rem 0.5rem;text-decoration:none;font-size:0.72rem;margin-left:0.4rem" rel="noopener noreferrer">Buy me a coffee</a></p>
     </section>
     <p class="tag" style="font-size:0.9rem">Verify the checksum before flashing. The Updater app on the device
     finds new builds on its own.</p>
@@ -226,24 +230,23 @@ repo sync -c -j$(nproc) --no-clone-bundle
 lunch bestrom_peridot-cp2a-user
 mka bestrom</pre>
 
-    <h2 class="sec" id="mcp">Customize</h2>
-    <p class="tag" style="font-size:0.92rem">Use <a href="https://serverhive.in/" style="color:#d1d5db">ServerHive</a>, sync the tree, and open that folder in Cursor. Add the connector below. It needs Python 3.11 or newer and
-    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. The first connection creates the environment.</p>
-<pre>cursor://anysphere.cursor-deeplink/mcp/install?name=bestrom&amp;config=eyJjb21tYW5kIjoidXYiLCJhcmdzIjpbInJ1biIsIi0tZGlyZWN0b3J5IiwiJHt3b3Jrc3BhY2VGb2xkZXJ9L3ZlbmRvci9iZXN0cm9tL3Rvb2xzL21jcCIsImJlc3Ryb20tbWNwIiwiLS10cmFuc3BvcnQiLCJzdGRpbyJdfQ==</pre>
+    <h2 class="sec" id="mcp">Build your own</h2>
+    <p class="tag" style="font-size:0.92rem">A laptop will not finish this. Use <a href="https://serverhive.in/" style="color:#d1d5db">ServerHive</a>, then follow the six steps. Python 3.11 or newer is required.</p>
+    <ol class="flow">
+      <li><b>1. Open ServerHive</b><span>Start an environment at <a href="https://serverhive.in/" style="color:#d1d5db">serverhive.in</a>. Do the rest there.</span></li>
+      <li><b>2. Install uv</b><span>Paste the first command below. It sets up the tool the connector needs.</span></li>
+      <li><b>3. Download the source</b><span>Paste the next two commands. Wait. This is the long step.</span></li>
+      <li><b>4. Add the connector</b><span>Open that folder in Cursor and click Add connector. Cursor asks before it installs.</span></li>
+      <li><b>5. Ask it to build</b><span>Say: build BestROM for peridot. The zip lands in <code>out/target/product/peridot/</code>.</span></li>
+      <li><b>6. Flash</b><span>Sideload the zip from recovery. Do not flash a boot image by itself.</span></li>
+    </ol>
+<pre>curl -LsSf https://astral.sh/uv/install.sh | sh
+repo init -u https://github.com/Mohithash/manifest -b 17 --git-lfs
+repo sync -c -j$(nproc) --no-clone-bundle</pre>
     <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.9rem 0 0">
       <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=bestrom&amp;config=eyJjb21tYW5kIjoidXYiLCJhcmdzIjpbInJ1biIsIi0tZGlyZWN0b3J5IiwiJHt3b3Jrc3BhY2VGb2xkZXJ9L3ZlbmRvci9iZXN0cm9tL3Rvb2xzL21jcCIsImJlc3Ryb20tbWNwIiwiLS10cmFuc3BvcnQiLCJzdGRpbyJdfQ==" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none">Add connector</a>
       <a href="https://serverhive.in/" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ServerHive</a>
-      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp/README.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">MCP guide</a>
     </p>
-
-    <h2 class="sec">Path</h2>
-    <ol class="flow">
-      <li><b>1 · ServerHive</b><span>Open an environment at <a href="https://serverhive.in/" style="color:#d1d5db">serverhive.in</a>. Do the rest there, not on a laptop.</span></li>
-      <li><b>2 · Sync</b><span><code>repo init</code> the BestROM manifest, branch <code>17</code>, then <code>repo sync</code>.</span></li>
-      <li><b>3 · Connect</b><span>Open that folder in Cursor and add the connector above. Cursor asks before it installs.</span></li>
-      <li><b>4 · Change</b><span>Ask the agent. It edits through the MCP tools, builds the module, and runs the image gate.</span></li>
-      <li><b>5 · Flash</b><span>Sideload the zip from recovery. Do not flash a boot image by itself.</span></li>
-    </ol>
 
     <h2 class="sec" id="sources">Sources</h2>
     <p class="tag" style="font-size:0.92rem">BestROM is a product layer. Almost everything that makes it work was written by someone else. Forks keep the upstream history. Licences are in <a href="CREDITS.md" style="color:#d1d5db">CREDITS</a>.</p>
