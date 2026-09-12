@@ -221,26 +221,20 @@ lunch bestrom_peridot-cp2a-user
 mka bestrom</pre>
 
     <h2 class="sec" id="mcp">Customize</h2>
-    <p class="tag" style="font-size:0.92rem">Use <a href="https://serverhive.in/" style="color:#d1d5db">ServerHive</a> for this.
-    A BestROM tree is not a laptop build. Open an environment there, sync the manifest, and point Cursor, Claude Code
-    or Codex at that checkout. The MCP server then syncs, builds a module, verifies the image and reads device logs.
-    The build gates stay on. It needs Python 3.11 or newer and
-    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. Approve <code>.mcp.json</code> once; the first
-    connection creates the environment.</p>
-<pre>curl -LsSf https://astral.sh/uv/install.sh | sh</pre>
+    <p class="tag" style="font-size:0.92rem">Use <a href="https://serverhive.in/" style="color:#d1d5db">ServerHive</a>, sync the tree, and open that folder in Cursor. Add the connector below. It needs Python 3.11 or newer and
+    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. The first connection creates the environment.</p>
+<pre>cursor://anysphere.cursor-deeplink/mcp/install?name=bestrom&amp;config=eyJjb21tYW5kIjoidXYiLCJhcmdzIjpbInJ1biIsIi0tZGlyZWN0b3J5IiwiJHt3b3Jrc3BhY2VGb2xkZXJ9L3ZlbmRvci9iZXN0cm9tL3Rvb2xzL21jcCIsImJlc3Ryb20tbWNwIiwiLS10cmFuc3BvcnQiLCJzdGRpbyJdfQ==</pre>
     <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.9rem 0 0">
+      <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=bestrom&amp;config=eyJjb21tYW5kIjoidXYiLCJhcmdzIjpbInJ1biIsIi0tZGlyZWN0b3J5IiwiJHt3b3Jrc3BhY2VGb2xkZXJ9L3ZlbmRvci9iZXN0cm9tL3Rvb2xzL21jcCIsImJlc3Ryb20tbWNwIiwiLS10cmFuc3BvcnQiLCJzdGRpbyJdfQ==" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none">Add connector</a>
       <a href="https://serverhive.in/" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ServerHive</a>
-      <a href="https://github.com/ServerHive-Development/guide" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ServerHive guide</a>
       <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp/README.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">MCP guide</a>
-      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/AGENTS.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">AGENTS.md</a>
-      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp.json" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">Client config</a>
     </p>
 
     <h2 class="sec">Path</h2>
     <ol class="flow">
       <li><b>1 · ServerHive</b><span>Open an environment at <a href="https://serverhive.in/" style="color:#d1d5db">serverhive.in</a>. Do the rest there, not on a laptop.</span></li>
       <li><b>2 · Sync</b><span><code>repo init</code> the BestROM manifest, branch <code>17</code>, then <code>repo sync</code>.</span></li>
-      <li><b>3 · Connect</b><span>Open that checkout in Cursor, Claude Code or Codex and approve <code>.mcp.json</code>.</span></li>
+      <li><b>3 · Connect</b><span>Open that folder in Cursor and add the connector above. Cursor asks before it installs.</span></li>
       <li><b>4 · Change</b><span>Ask the agent. It edits through the MCP tools, builds the module, and runs the image gate.</span></li>
       <li><b>5 · Flash</b><span>Sideload the zip from recovery. Do not flash a boot image by itself.</span></li>
     </ol>
