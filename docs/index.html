@@ -176,15 +176,14 @@
     </div>
 
     <h2 class="sec" id="agent">BestROM Agent</h2>
-    <p class="tag" style="font-size:0.92rem">One brain, shared. Settings &gt; Custom Tweaks &gt; Advanced &gt; Advanced &gt; Agent mode &gt; Brain / model. You supply the endpoint and the key. BestROM runs no model. The phone must be unlocked. Agent mode can stay off: the launcher, the phone and Files still call the brain.</p>
-    <div class="map">
-      <div class="branch"><h3>Ask the phone</h3><p>Open BestROM Agent and type the task. It reads the screen and acts one step at a time. It asks before it changes anything. Off by default, and off again after a reboot. It will not touch the lock screen, bootloader, developer options, accessibility, or a payment app your task never named.</p></div>
-      <div class="branch"><h3>Launcher</h3><p>Long-press home, then Home settings &gt; Quickspace. Turn on At A Glance and Focus and health. The line under the clock shows today's focus score and water count, counted on the phone. A short tip from the brain, at most once every six hours. Tap the line to log a cup. Not medical advice.</p></div>
-      <div class="branch"><h3>Phone</h3><p>Phone menu &gt; Call history &gt; Statistics &gt; menu &gt; Call insights. The counts stay on the phone. Summarise with BestROM brain sends only those short totals.</p></div>
-      <div class="branch"><h3>Files</h3><p>System Files app, not MiXplorer. Overflow menu &gt; Clean with BestROM. The scan stays local. Organise plan sends names, sizes and ages only, not file contents. Nothing is deleted until you select items and confirm.</p></div>
-      <div class="branch root"><h3>Mini app builder</h3><p>In Brain / model, set autonomy to Full, then ask the agent for a counter, a checklist, a daily log, or a timer. These are templates: no generated code, no extra APK, at most 16. Open them on the Agent mode screen, or pin one as a home-screen widget. That screen also has a water tracker and a weight log.</p></div>
-    </div>
-    <p class="tag" style="font-size:0.9rem;margin-top:0.8rem">Presets: Anthropic, OpenAI, Gemini, Groq, Cerebras, OpenRouter, or Ollama / llama.cpp on your own network. Groq and Cerebras have a free tier.</p>
+    <p class="tag" style="font-size:0.92rem">Your model. Settings &gt; Custom Tweaks &gt; Advanced &gt; Agent mode.</p>
+    <ul class="whatsnew">
+      <li><b>Chat</b> — type a task, the phone does it</li>
+      <li><b>Launcher</b> — focus and water on the home line</li>
+      <li><b>Phone</b> — call insights</li>
+      <li><b>Files</b> — clean suggestions</li>
+      <li><b>Mini apps</b> — counter, checklist, daily log, timer</li>
+    </ul>
 
     <h2 class="sec">Changelog</h2>
     <section class="bestrom-card">
@@ -194,7 +193,7 @@
         <li><b>Games</b> — Edge enters Game Mode on its own while a game is in front, and disarms the global input filter until you leave it.</li>
         <li><b>Theme</b> — one chrome across Settings, Quick Settings and the launcher: 22dp cards, Space Grotesk, Doto on the clock, pill tiles.</li>
         <li><b>Agent mode menu entry</b> — fixed the Agent mode rows being added to a Custom Tweaks screen that nothing displays, so there was no way into the feature from Settings. They are now on the Advanced tab.</li>
-        <li><b>Agent mode</b> — the device can carry out a typed task on its own. Off by default, disabled again on reboot. You supply the model endpoint and key; no endpoint is run by this project. It prompts before any action that changes state, and refuses lock screen, bootloader, developer, accessibility and payment actions.</li>
+        <li><b>Agent mode</b> — type a task, the phone does it. You bring the model.</li>
         <li><b>WebView</b> — replaced the AOSP Chromium prebuilt with Cromite 148.0.7778.168, built from a fork that disables the self-check that crashed host apps. No variations, metrics or component-updater endpoints. It receives no certificate-revocation updates between releases and trails the prebuilt by four Chrome majors.</li>
         <li><b>Keyboard</b> — replaced the AOSP keyboard with LeanType 4.2.0, defaulting to full height and width, with its own spell checker. Signed with the ROM key, so it updates by OTA only.</li>
         <li><b>DNS blocking</b> — ad, tracker and malware blocking in the system resolver, enabled by default. No root, no VPN slot. An optional deep mode covers apps that bypass the resolver.</li>
