@@ -81,7 +81,17 @@
     td.hash { font-family: var(--br-mono); font-size: 0.66rem; color: #6b7280; word-break: break-all; }
     pre { background: #0b0b0b; border: 1px solid #1a1a1a; border-radius: 10px;
           padding: 0.9rem 1rem; overflow: auto; font-size: 0.82rem; color: #cfcfcf; }
-    @media (max-width: 560px) { .spec { grid-template-columns: 1fr; } }
+    .flow { list-style: none; margin: 1rem 0 0; padding: 0; }
+    .flow li { position: relative; background: #0b0b0b; border: 1px solid #1a1a1a; border-radius: 12px; padding: 0.75rem 0.9rem; margin: 0 0 1.35rem; }
+    .flow li:not(:last-child)::after { content: ""; position: absolute; left: 1.6rem; bottom: -1.4rem; width: 1px; height: 1.35rem; background: #333; }
+    .flow b { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.15rem; }
+    .flow span { color: #9ca3af; font-size: 0.92rem; }
+    .map { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-top: 0.9rem; }
+    .branch { background: #0b0b0b; border: 1px solid #1a1a1a; border-radius: 12px; padding: 0.85rem 1rem; }
+    .branch h3 { margin: 0 0 0.45rem; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #6b7280; font-weight: 600; }
+    .branch p { margin: 0; color: #9ca3af; font-size: 0.88rem; line-height: 1.65; }
+    .branch.root { grid-column: 1 / -1; }
+    @media (max-width: 560px) { .spec, .map { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body class="bestrom-dark">
@@ -211,22 +221,46 @@ lunch bestrom_peridot-cp2a-user
 mka bestrom</pre>
 
     <h2 class="sec" id="mcp">Customize</h2>
-    <p class="tag" style="font-size:0.92rem">To change the ROM further, use the MCP server that ships in the tree.
-    Cursor, Claude Code and Codex can sync, build a module, verify an image and read device logs through it,
-    without a raw shell and without dropping the build gates. It needs Python 3.11 or newer and
-    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. After <code>repo sync</code>, approve the
-    project <code>.mcp.json</code> once. The first connection creates the environment.</p>
+    <p class="tag" style="font-size:0.92rem">Use <a href="https://serverhive.in/" style="color:#d1d5db">ServerHive</a> for this.
+    A BestROM tree is not a laptop build. Open an environment there, sync the manifest, and point Cursor, Claude Code
+    or Codex at that checkout. The MCP server then syncs, builds a module, verifies the image and reads device logs.
+    The build gates stay on. It needs Python 3.11 or newer and
+    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. Approve <code>.mcp.json</code> once; the first
+    connection creates the environment.</p>
 <pre>curl -LsSf https://astral.sh/uv/install.sh | sh</pre>
     <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.9rem 0 0">
+      <a href="https://serverhive.in/" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ServerHive</a>
+      <a href="https://github.com/ServerHive-Development/guide" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">ServerHive guide</a>
       <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp/README.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">MCP guide</a>
       <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/AGENTS.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">AGENTS.md</a>
       <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp.json" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">Client config</a>
     </p>
 
+    <h2 class="sec">Path</h2>
+    <ol class="flow">
+      <li><b>1 · ServerHive</b><span>Open an environment at <a href="https://serverhive.in/" style="color:#d1d5db">serverhive.in</a>. Do the rest there, not on a laptop.</span></li>
+      <li><b>2 · Sync</b><span><code>repo init</code> the BestROM manifest, branch <code>17</code>, then <code>repo sync</code>.</span></li>
+      <li><b>3 · Connect</b><span>Open that checkout in Cursor, Claude Code or Codex and approve <code>.mcp.json</code>.</span></li>
+      <li><b>4 · Change</b><span>Ask the agent. It edits through the MCP tools, builds the module, and runs the image gate.</span></li>
+      <li><b>5 · Flash</b><span>Sideload the zip from recovery. Do not flash a boot image by itself.</span></li>
+    </ol>
+
+    <h2 class="sec" id="sources">Sources</h2>
+    <p class="tag" style="font-size:0.92rem">BestROM is a product layer. Almost everything that makes it work was written by someone else. Forks keep the upstream history. Licences are in <a href="CREDITS.md" style="color:#d1d5db">CREDITS</a>.</p>
+    <div class="map">
+      <div class="branch root"><h3>BestROM</h3><p>Android 17 for <code>peridot</code>, on VoltageOS 6.1. The leaves below are the sources.</p></div>
+      <div class="branch"><h3>Base</h3><p><a href="https://github.com/VoltageOS" style="color:#d1d5db">VoltageOS 6.1</a> · <a href="https://github.com/LineageOS" style="color:#d1d5db">LineageOS</a> · <a href="https://source.android.com" style="color:#d1d5db">AOSP</a> <code>android-17.0.0_r1</code></p></div>
+      <div class="branch"><h3>Kernel</h3><p><a href="https://github.com/Mohithash/kernel_xiaomi_sm8635" style="color:#d1d5db">Theettam</a> · <a href="https://github.com/GuidixX/kernel_xiaomi_sm8635" style="color:#d1d5db">GuidixX device kernel</a> · <a href="https://android.googlesource.com/kernel/common" style="color:#d1d5db">Android GKI</a> · <a href="https://github.com/GuidixX/kernel_xiaomi_sm8635-modules" style="color:#d1d5db">modules</a> · <a href="https://github.com/GuidixX/kernel_xiaomi_sm8635-devicetrees" style="color:#d1d5db">devicetrees</a></p></div>
+      <div class="branch"><h3>Device and vendor</h3><p><a href="https://github.com/Mohithash/device_xiaomi_peridot" style="color:#d1d5db">device tree</a> · <a href="https://github.com/Mohithash/vendor_xiaomi_peridot" style="color:#d1d5db">Xiaomi blobs</a> · <a href="https://github.com/peridot-dev/android_device_xiaomi_peridot-miuicamera" style="color:#d1d5db">MiuiCamera device</a> · <a href="https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_peridot-miuicamera" style="color:#d1d5db">MiuiCamera vendor</a> · <a href="https://github.com/Mohithash/hardware_xiaomi" style="color:#d1d5db">hardware/xiaomi</a> · <a href="https://github.com/Mohithash/hardware_google_pixel" style="color:#d1d5db">hardware/google/pixel</a></p></div>
+      <div class="branch"><h3>Apps that ship</h3><p><a href="https://github.com/uazo/cromite" style="color:#d1d5db">Cromite</a> (<a href="https://github.com/Mohithash/cromite/tree/bestrom-148" style="color:#9ca3af">fork</a>) · <a href="https://github.com/LeanBitLab/LeanType" style="color:#d1d5db">LeanType</a> (<a href="https://github.com/Mohithash/LeanType/tree/bestrom-17" style="color:#9ca3af">fork</a>, from <a href="https://github.com/Helium314/HeliBoard" style="color:#9ca3af">HeliBoard</a>, <a href="https://github.com/openboard-team/openboard" style="color:#9ca3af">OpenBoard</a>, AOSP LatinIME) · <a href="https://github.com/fcmfcm1999/EdgeX" style="color:#d1d5db">EdgeX</a> (<a href="https://github.com/Mohithash/packages_apps_Edge" style="color:#9ca3af">Edge</a>) · Nullroute, idea from <a href="https://github.com/ZG089/Re-Malwack" style="color:#d1d5db">Re-Malwack</a> · <a href="https://mixplorer.com" style="color:#d1d5db">MiXplorer</a> · <a href="https://viayoo.com" style="color:#d1d5db">Via</a> · MiuiCamera (Xiaomi)</p></div>
+      <div class="branch"><h3>Ideas, not copies</h3><p>Agent structure from <a href="https://github.com/agents-io/PokeClaw" style="color:#d1d5db">PokeClaw</a>. Screen digest from <a href="https://github.com/minitap-ai/mobile-use" style="color:#d1d5db">minitap mobile-use</a>. Tool names follow <a href="https://github.com/mobile-next/mobile-mcp" style="color:#d1d5db">mobile-mcp</a>. No file is taken from any of the three.</p></div>
+      <div class="branch"><h3>Fonts</h3><p><a href="https://github.com/oliverlalan/Doto" style="color:#d1d5db">Doto</a> · <a href="https://github.com/floriankarsten/space-grotesk" style="color:#d1d5db">Space Grotesk</a> · both SIL Open Font License 1.1</p></div>
+      <div class="branch root"><h3>BestROM forks</h3><p>On <code>github.com/Mohithash</code>, branch <code>17</code> unless noted. <a href="https://github.com/Mohithash/manifest" style="color:#d1d5db">manifest</a> · <a href="https://github.com/Mohithash/vendor_bestrom" style="color:#d1d5db">vendor_bestrom</a> · <a href="https://github.com/Mohithash/vendor_voltage" style="color:#d1d5db">vendor_voltage</a> · <a href="https://github.com/Mohithash/frameworks_base" style="color:#d1d5db">frameworks_base</a> · <a href="https://github.com/Mohithash/frameworks_native" style="color:#d1d5db">frameworks_native</a> · <a href="https://github.com/Mohithash/frameworks_av" style="color:#d1d5db">frameworks_av</a> · <a href="https://github.com/Mohithash/frameworks_opt_telephony" style="color:#d1d5db">frameworks_opt_telephony</a> · <a href="https://github.com/Mohithash/system_core" style="color:#d1d5db">system_core</a> · <a href="https://github.com/Mohithash/system_sepolicy" style="color:#d1d5db">system_sepolicy</a> · <a href="https://github.com/Mohithash/device_voltage_sepolicy" style="color:#d1d5db">device_voltage_sepolicy</a> · <a href="https://github.com/Mohithash/build" style="color:#d1d5db">build/make</a> · <a href="https://github.com/Mohithash/build_soong" style="color:#d1d5db">build/soong</a> · <a href="https://github.com/Mohithash/bootable_recovery" style="color:#d1d5db">recovery</a> · <a href="https://github.com/Mohithash/hardware_voltage_interfaces" style="color:#d1d5db">hardware/voltage/interfaces</a> · <a href="https://github.com/Mohithash/packages_apps_Settings" style="color:#d1d5db">Settings</a> · <a href="https://github.com/Mohithash/packages_apps_Launcher3" style="color:#d1d5db">Launcher3</a> · <a href="https://github.com/Mohithash/packages_apps_SetupWizard" style="color:#d1d5db">SetupWizard</a> · <a href="https://github.com/Mohithash/packages_apps_Updater" style="color:#d1d5db">Updater</a> · <a href="https://github.com/Mohithash/packages_apps_Dialer" style="color:#d1d5db">Dialer</a> · <a href="https://github.com/Mohithash/packages_apps_DocumentsUI" style="color:#d1d5db">DocumentsUI</a> · <a href="https://github.com/Mohithash/packages_apps_Freezer" style="color:#d1d5db">Freezer</a> · <a href="https://github.com/Mohithash/packages_apps_BestromAgent" style="color:#d1d5db">BestromAgent</a> · <a href="https://github.com/Mohithash/packages_apps_BestromPreinstaller" style="color:#d1d5db">BestromPreinstaller</a> · <a href="https://github.com/Mohithash/packages_apps_ParanoidSense" style="color:#d1d5db">ParanoidSense</a> · <a href="https://github.com/Mohithash/packages_apps_Powerhub" style="color:#d1d5db">Powerhub</a> · <a href="https://github.com/Mohithash/packages_apps_Nullroute" style="color:#d1d5db">Nullroute</a> (<code>main</code>) · <a href="https://github.com/Mohithash/packages_modules_DnsResolver" style="color:#d1d5db">DnsResolver</a> · <a href="https://github.com/Mohithash/bestrom_ota" style="color:#d1d5db">OTA catalog</a> · <a href="https://github.com/Mohithash/bestrom-project" style="color:#d1d5db">project docs</a></p></div>
+    </div>
+
     <h2 class="sec">Credits</h2>
-    <p class="tag" style="font-size:0.92rem">Built on VoltageOS 6.1, LineageOS and AOSP. Ships Cromite for the
-    WebView, LeanType for the keyboard, a native port of EdgeX for the edge gestures, and MiXplorer and Via
-    unmodified. Doto and Space Grotesk are used under the SIL Open Font License. The full list, with licences, is in
+    <p class="tag" style="font-size:0.92rem">Every project this build stands on is named in the
+    <a href="#sources" style="color:#d1d5db">source map</a>. Licences are in
     <a href="CREDITS.md" style="color:#d1d5db">CREDITS</a>.</p>
 
     <h2 class="sec">Project documents</h2>
