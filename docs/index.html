@@ -209,9 +209,19 @@ repo sync -c -j$(nproc) --no-clone-bundle
 . build/envsetup.sh
 lunch bestrom_peridot-cp2a-user
 mka bestrom</pre>
-    <p class="tag" style="font-size:0.92rem">The tree ships <code>AGENTS.md</code> and <code>.mcp.json</code> at its
-    root, so a coding agent can sync, build, verify and test it through the MCP server in
-    <code>vendor/bestrom/tools/mcp</code>.</p>
+
+    <h2 class="sec" id="mcp">Customize</h2>
+    <p class="tag" style="font-size:0.92rem">To change the ROM further, use the MCP server that ships in the tree.
+    Cursor, Claude Code and Codex can sync, build a module, verify an image and read device logs through it,
+    without a raw shell and without dropping the build gates. It needs Python 3.11 or newer and
+    <a href="https://docs.astral.sh/uv/" style="color:#d1d5db">uv</a>. After <code>repo sync</code>, approve the
+    project <code>.mcp.json</code> once. The first connection creates the environment.</p>
+<pre>curl -LsSf https://astral.sh/uv/install.sh | sh</pre>
+    <p style="display:flex;flex-wrap:wrap;gap:0.55rem;margin:0.9rem 0 0">
+      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp/README.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">MCP guide</a>
+      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/AGENTS.md" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">AGENTS.md</a>
+      <a href="https://github.com/Mohithash/vendor_bestrom/blob/voltage-17/tools/mcp.json" style="color:#d1d5db;border:1px solid #333;border-radius:10px;padding:0.55rem 0.85rem;text-decoration:none" rel="noopener noreferrer">Client config</a>
+    </p>
 
     <h2 class="sec">Credits</h2>
     <p class="tag" style="font-size:0.92rem">Built on VoltageOS 6.1, LineageOS and AOSP. Ships Cromite for the
