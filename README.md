@@ -164,8 +164,14 @@ Font License. The full list, with licences, is in
 
 ## License
 
-BestROM original files are Apache-2.0. AOSP, device and kernel sources keep
-their upstream licenses.
+BestROM is free and open source. You may modify it and distribute a build
+under your own name. BestROM's own files are Apache-2.0. Keep the notices.
+AOSP, device, kernel and shipped components keep their upstream licences:
+GPL parts need their source, and MiXplorer, Via and the Xiaomi camera blobs
+are not relicensed by this project.
+
+A fix or a port is a pull request. See
+[`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md).
 
 ---
 
